@@ -1,0 +1,49 @@
+{
+  "raw_prediction_shape": [
+    400,
+    560,
+    72
+  ],
+  "reference_shape": [
+    72,
+    400,
+    560
+  ],
+  "aligned_prediction_shape": [
+    72,
+    400,
+    560
+  ],
+  "dtype": "float32",
+  "min_m": -0.038261570036411285,
+  "max_m": 2.826355457305908,
+  "negative_count": 2928029,
+  "negative_fraction": 0.1815494171626984,
+  "finite": true,
+  "active_cells": 224000,
+  "all_grid_unclamped": {
+    "mae_m": 0.0024089803244624025,
+    "rmse_m": 0.005118761596690561,
+    "mse_m2": 2.6201720283754104e-05,
+    "r2": 0.9945024355179316,
+    "csi_0p15": 0.9545960828895015
+  },
+  "active_unclamped": {
+    "mae_m": 0.0024089803244624025,
+    "rmse_m": 0.005118761596690561,
+    "mse_m2": 2.6201720283754104e-05,
+    "r2": 0.9945024355179316,
+    "csi_0p15": 0.9545960828895015
+  },
+  "active_clamped": {
+    "mae_m": 0.0023246930486216758,
+    "rmse_m": 0.005109897225328714,
+    "mse_m2": 2.61110496534221e-05,
+    "r2": 0.99452145975113,
+    "csi_0p15": 0.9545960828895015
+  },
+  "prediction_sha256": "b33c9b84facd93e0da1847f8139fab554be2f937b339b22334832a899e650fef",
+  "prediction_bytes": 64512128,
+  "checkpoint_sha256": "ebe1fea957cf87b5070dc2dd27afae9abad97a1e4874a6cc5589f1a6e6728005",
+  "checkpoint_bytes": 116438570
+}

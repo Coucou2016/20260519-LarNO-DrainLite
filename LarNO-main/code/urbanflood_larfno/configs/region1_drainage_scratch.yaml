@@ -1,0 +1,90 @@
+default: &DEFAULT
+
+  # Lightweight LarNO-D scratch training config for the drainage dataset.
+
+  n_params_baseline: None
+  verbose: True
+  arch: 'tfno2d'
+
+  distributed:
+    use_distributed: False
+    wireup_info: 'mpi'
+    wireup_store: 'tcp'
+    model_parallel_size: 2
+    seed: 666
+
+  tfno2d:
+    data_channels: 21
+    n_modes_height: 50
+    n_modes_width: 70
+    hidden_channels: 16
+    projection_channel_ratio: 2
+    n_layers: 2
+    domain_padding: None
+    domain_padding_mode: 'one-sided'
+    fft_norm: 'forward'
+    norm: 'group_norm'
+    skip: 'linear'
+    implementation: 'factorized'
+    separable: 0
+    preactivation: 0
+    use_channel_mlp: 1
+    channel_mlp_expansion: 0.5
+    channel_mlp_dropout: 0
+    factorization: None
+    rank: 1.0
+    fixed_rank_modes: None
+    dropout: 0.0
+    tensor_lasso_penalty: 0.0
+    joint_factorization: False
+    stabilizer: None
+    wall_height: 50
+
+  finetune:
+    enabled: False
+    pretrained_dir: ""
+    state_dict_name: ""
+
+  opt:
+    n_epochs: 100
+    learning_loss: 'WMSE'
+    training_loss: 'WMSE'
+    weight_decay: 1e-4
+    amp_autocast: False
+    scheduler_T_max: 100
+    scheduler_patience: 5
+    scheduler: 'WarmUpCosineAnneal'
+    step_size: 60
+    gamma: 0.5
+    warm_up_iter: 10
+    T_max: 100
+    lr_max: 1e-3
+    lr_min: 1e-5
+    window_size: 4
+
+  data:
+    batch_size: 1
+    n_train: 1
+    train_resolution: 200*280
+    n_test: 1
+    test_resolutions: 200*280
+    test_batch_sizes: 1
+    encode_input: True
+    encode_output: False
+    num_workers_train: 0
+    num_workers_test: 0
+    train_list: "region1_drainage_train.txt"
+    test_list: "region1_drainage_test.txt"
+    data_root: "../../benchmark/urbanflood/"
+    exp_root: "../../exp"
+    train_location: "region1_20m_drainage_v1"
+    drainage_features: "drain_inlet_mask,drain_outfall_mask,pipe_mask,pipe_diameter,pipe_slope,pipe_capacity,pipe_cover_depth,distance_to_outfall"
+
+  eval:
+    flood_threshold: 0.03
+    locations: "region1_20m_drainage_v1"
+
+  patching:
+    levels: 0
+    padding: 0
+    stitching: False

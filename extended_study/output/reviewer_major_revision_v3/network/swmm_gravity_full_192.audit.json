@@ -1,0 +1,42 @@
+{
+  "source_nodes": 2847,
+  "source_links": 6839,
+  "valid_nodes": 2276,
+  "source_components": 113,
+  "retained_component_nodes": 2276,
+  "removed_nodes_outside_largest_component": 570,
+  "unique_source_endpoint_pairs": 5984,
+  "removed_parallel_excess_links": 854,
+  "junctions": 2276,
+  "outfalls": 192,
+  "conduits": 2276,
+  "directed_junctions_reaching_outfall": 2276,
+  "cycles": 0,
+  "zero_slope_conduits": 0,
+  "minimum_design_slope": 0.0005,
+  "cover_depth_m": {
+    "min": 0.5,
+    "median": 2.4660995701471484,
+    "p95": 10.632675806703748,
+    "max": 33.94424885953598
+  },
+  "conduit_length_m": {
+    "min": 20.0,
+    "median": 80.0,
+    "p95": 188.67962264113208,
+    "max": 364.9657518178932
+  },
+  "diameter_counts": {
+    "0.8": 2040,
+    "1.0": 231,
+    "1.2": 5
+  },
+  "outfall_boundary": "NORMAL depth at 192 distributed synthetic receiving points; coordinates omitted from surface coupling",
+  "swmm_validation": "ok",
+  "routing_options": {
+    "routing_step_s": 1.0,
+    "variable_step": 0.25,
+    "max_trials": 50,
+    "lengthening_step_s": 5.0
+  }
+}

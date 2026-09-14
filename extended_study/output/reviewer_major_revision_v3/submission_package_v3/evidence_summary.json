@@ -1,0 +1,205 @@
+{
+  "surface_to_hybrid_reduction_pct": 77.01402205387645,
+  "static_delta_bootstrap": [
+    0.05405791103839874,
+    0.025694020837545413,
+    0.08273261785507202
+  ],
+  "prior_delta_bootstrap": [
+    1.0956495851278305,
+    0.6424040049314499,
+    1.5661421418190002
+  ],
+  "network": {
+    "input_file": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v3\\network\\swmm_bidirectional_normal_step05.inp",
+    "junctions": 2276,
+    "outfalls": 221,
+    "conduits": 2276,
+    "junctions_with_coordinates": 2276,
+    "outfalls_with_coordinates": 0,
+    "outfall_type_counts": {
+      "NORMAL": 221
+    },
+    "allow_ponding": "NO",
+    "junctions_with_nonzero_ponded_area": 0,
+    "junction_surcharge_depth_m": {
+      "min": 5.0,
+      "median": 5.0,
+      "p95": 5.0,
+      "max": 5.0
+    },
+    "fixed_outfall_stage_equals_invert": null,
+    "directed_junctions_reaching_outfall": 2276,
+    "directed_outfall_reachability_pct": 100.0,
+    "junctions_without_directed_outfall_path": 0,
+    "isolated_junctions": 0,
+    "directed_cycle_count": 0,
+    "duplicate_undirected_endpoint_groups": 0,
+    "excess_parallel_conduits": 0,
+    "zero_or_reverse_slope_conduits": 0,
+    "pipe_crown_above_junction_rim_endpoints": 0,
+    "pipe_crown_above_junction_rim_examples": [],
+    "slope": {
+      "min": 0.0004985062490056077,
+      "median": 0.004863979562174367,
+      "p95": 0.05339666666666667,
+      "max": 0.10000223608595517
+    },
+    "length_m": {
+      "min": 20.0,
+      "median": 82.462,
+      "p95": 223.607,
+      "max": 490.306
+    },
+    "cover_depth_m": {
+      "min": 1.5,
+      "median": 1.5,
+      "p95": 2.174975,
+      "max": 7.4904
+    },
+    "diameter_m": {
+      "min": 0.8,
+      "median": 0.8,
+      "p95": 1.0,
+      "max": 1.2
+    },
+    "junction_in_degree": {
+      "min": 0.0,
+      "median": 1.0,
+      "p95": 3.0,
+      "max": 10.0
+    },
+    "junction_out_degree": {
+      "min": 1.0,
+      "median": 1.0,
+      "p95": 1.0,
+      "max": 1.0
+    },
+    "acceptance": {
+      "all_junctions_reach_outfall": true,
+      "no_isolated_junctions": true,
+      "no_cycles": true,
+      "no_parallel_endpoint_duplicates": true,
+      "all_conduits_positive_slope": true,
+      "all_pipe_crowns_below_junction_rims": true,
+      "cover_not_above_8m": true,
+      "outfall_nodes_identifiable_by_type": true,
+      "outfall_boundary_defined": true,
+      "fixed_tailwater_consistent_when_used": true,
+      "swmm_ponding_disabled_for_2d_coupling": true,
+      "positive_surcharge_headroom_for_bidirectional_exchange": true
+    }
+  },
+  "larno": {
+    "raw_prediction_shape": [
+      400,
+      560,
+      72
+    ],
+    "reference_shape": [
+      72,
+      400,
+      560
+    ],
+    "aligned_prediction_shape": [
+      72,
+      400,
+      560
+    ],
+    "dtype": "float32",
+    "min_m": -0.038261570036411285,
+    "max_m": 2.826355457305908,
+    "negative_count": 2928029,
+    "negative_fraction": 0.1815494171626984,
+    "finite": true,
+    "active_cells": 224000,
+    "all_grid_unclamped": {
+      "mae_m": 0.0024089803244624025,
+      "rmse_m": 0.005118761596690561,
+      "mse_m2": 2.6201720283754104e-05,
+      "r2": 0.9945024355179316,
+      "csi_0p15": 0.9545960828895015
+    },
+    "active_unclamped": {
+      "mae_m": 0.0024089803244624025,
+      "rmse_m": 0.005118761596690561,
+      "mse_m2": 2.6201720283754104e-05,
+      "r2": 0.9945024355179316,
+      "csi_0p15": 0.9545960828895015
+    },
+    "active_clamped": {
+      "mae_m": 0.0023246930486216758,
+      "rmse_m": 0.005109897225328714,
+      "mse_m2": 2.61110496534221e-05,
+      "r2": 0.99452145975113,
+      "csi_0p15": 0.9545960828895015
+    },
+    "prediction_sha256": "b33c9b84facd93e0da1847f8139fab554be2f937b339b22334832a899e650fef",
+    "prediction_bytes": 64512128,
+    "checkpoint_sha256": "ebe1fea957cf87b5070dc2dd27afae9abad97a1e4874a6cc5589f1a6e6728005",
+    "checkpoint_bytes": 116438570
+  },
+  "hybrid_meta": {
+    "created_at": "2026-09-04T14:40:01+0800",
+    "dataset": "region1_20m_drainage_v3_full",
+    "events": [
+      "event1",
+      "event20",
+      "event65",
+      "event66",
+      "event67",
+      "event68",
+      "event69",
+      "event70"
+    ],
+    "outer_validation": "leave one complete event out",
+    "inner_validation": "one complete event selected without test-event access",
+    "prior_leakage_control": "Held-event prior uses only seven outer-training events; every fitted row uses a prior averaged from other training events and excludes its own target.",
+    "groups": {
+      "clim_dynamic": [
+        "climatology_residual_mm",
+        "surface_depth_mm",
+        "rainfall_mm",
+        "cumulative_rainfall_mm",
+        "dem_m",
+        "dem_slope",
+        "time_norm",
+        "time_sin",
+        "time_cos",
+        "surface_depth_3x3_mean_mm",
+        "surface_depth_7x7_mean_mm"
+      ],
+      "clim_all_static": [
+        "climatology_residual_mm",
+        "surface_depth_mm",
+        "rainfall_mm",
+        "cumulative_rainfall_mm",
+        "dem_m",
+        "dem_slope",
+        "time_norm",
+        "time_sin",
+        "time_cos",
+        "surface_depth_3x3_mean_mm",
+        "surface_depth_7x7_mean_mm",
+        "drain_inlet_mask",
+        "pipe_mask",
+        "drain_inlet_count",
+        "pipe_segment_count",
+        "network_degree",
+        "pipe_density_3x3",
+        "pipe_density_7x7",
+        "inlet_density_7x7",
+        "pipe_diameter",
+        "pipe_slope",
+        "pipe_capacity",
+        "pipe_cover_depth",
+        "capacity_density_7x7"
+      ]
+    },
+    "pixels_per_step": 450,
+    "total_seconds": 769.5297233000019,
+    "peak_rss_mb": 3491.56640625,
+    "platform": "Windows-10-10.0.17763-SP0",
+    "logical_cpu_count": 40
+  }
+}

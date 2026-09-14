@@ -1,0 +1,110 @@
+{
+  "sample": "sample1",
+  "folders": {
+    "1-node": {
+      "pattern": "Node.shp",
+      "purpose": "SWMM nodes + ITZI coupling coordinates",
+      "status": "present",
+      "detail": "Node.shp",
+      "integrated": "已接入 SWMM+ITZI 耦合"
+    },
+    "2-link": {
+      "pattern": "Link.shp",
+      "purpose": "SWMM conduits",
+      "status": "present",
+      "detail": "Link.shp",
+      "integrated": "已接入 SWMM DYNWAVE"
+    },
+    "3-subcatchment": {
+      "pattern": "Subcatchment.shp",
+      "purpose": "SWMM subcatchments",
+      "status": "present",
+      "detail": "Subcatchment.shp",
+      "integrated": "部分接入（shapefile→SWMM [SUBCATCHMENTS]；dummy RainGage，雨仍施于 ITZI 地表）"
+    },
+    "4-dem": {
+      "pattern": "dem_10m.asc",
+      "purpose": "ITZI DEM (source elevations, nodata mask only)",
+      "status": "present",
+      "detail": "dem_10m.asc, dem_10m.asc.aux.xml, dem_10m.ASC.xml, dem_10m.prj",
+      "integrated": "已接入 ITZI（源高程，仅 nodata 中值填充）"
+    },
+    "5-rainfall": {
+      "pattern": "*.csv",
+      "purpose": "Rainfall time series (intensity / depth)",
+      "status": "present",
+      "detail": "multi=4 files, single=1.csv",
+      "integrated": "部分接入（4 站雨强 CSV + IDW；站点 XY 由子汇水区质心推断，非实测坐标）"
+    },
+    "6-boundary": {
+      "pattern": "mask.shp",
+      "purpose": "Domain active mask",
+      "status": "present",
+      "detail": "mask.shp",
+      "integrated": "已接入域内 mask（阻塞区 n=100）"
+    },
+    "7-lulc": {
+      "pattern": "lulc.asc",
+      "purpose": "Manning n mapping",
+      "status": "present",
+      "detail": "lulc.asc, lulc.ASC.xml, lulc.prj, lulc_output.prj",
+      "integrated": "已接入 Manning 映射"
+    },
+    "8-river": {
+      "pattern": "river.shp",
+      "purpose": "River open-boundary polyline",
+      "status": "present",
+      "detail": "river.shp",
+      "integrated": "部分接入（river.shp→bctype=3；仅栅格边界×河道；见 simulation.river_bc_cells）"
+    },
+    "9-hyd_station": {
+      "pattern": "hyd_station*.csv",
+      "purpose": "Validation reference",
+      "status": "present",
+      "detail": "hyd_station1.csv, 出水口330110D0292YS0042水文站.txt",
+      "integrated": "未接入（CSV 存在；未加载、未率定、未对比）"
+    },
+    "10-tidal_station": {
+      "pattern": "tidal_station*.csv",
+      "purpose": "Tidal / open-boundary stage",
+      "status": "present",
+      "detail": "tidal_station1.csv, 出水口330110D0077YS0012潮汐站.txt",
+      "integrated": "部分接入（潮位 CSV→WSE；仅当 river_bc_cells>0 时生效）"
+    }
+  },
+  "simulation": {
+    "sample": "sample1",
+    "dem_shape": [
+      222,
+      144
+    ],
+    "cellsize": 10.0,
+    "dem_source_min": -0.7549999952316284,
+    "dem_source_max": 30.0,
+    "rainfall_sources": [
+      "E:\\Projects\\20260518-itzi-flood\\test_cases\\20260603-UFIM\\sample1\\5-rainfall\\雨强\\多雨量站多曲线\\1.csv",
+      "E:\\Projects\\20260518-itzi-flood\\test_cases\\20260603-UFIM\\sample1\\5-rainfall\\雨强\\多雨量站多曲线\\2.csv",
+      "E:\\Projects\\20260518-itzi-flood\\test_cases\\20260603-UFIM\\sample1\\5-rainfall\\雨强\\多雨量站多曲线\\3.csv",
+      "E:\\Projects\\20260518-itzi-flood\\test_cases\\20260603-UFIM\\sample1\\5-rainfall\\雨强\\多雨量站多曲线\\4.csv"
+    ],
+    "rain_stations_inferred": 4,
+    "rain_peak_mm_h": 262.79998779296875,
+    "sim_hours": 2.0833333333333335,
+    "river_bc_cells": 0,
+    "surface_peak_m": 2.4421274662017822,
+    "surface_flooded": 5918,
+    "surface_vol_m3": 118986.03125,
+    "swmm_peak_m": 2.4401440620422363,
+    "swmm_flooded": 4722,
+    "swmm_vol_m3": 77551.71875,
+    "swmm_drained_m3": 279.1253712141683
+  },
+  "boundary": {
+    "river_cells": 0,
+    "tidal_source": null
+  },
+  "physics": {
+    "surface_solver": "itzi.surfaceflow.SurfaceFlowSimulation",
+    "drainage_solver": "SWMM DYNWAVE via pyswmm + DrainageSimulation"
+  }
+}

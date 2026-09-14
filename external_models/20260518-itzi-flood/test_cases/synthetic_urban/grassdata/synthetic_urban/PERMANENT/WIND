@@ -1,0 +1,18 @@
+proj:       1
+zone:       50
+north:      500
+south:      0
+east:       500
+west:       0
+cols:       100
+rows:       100
+e-w resol:  5
+n-s resol:  5
+top:        1.000000000000000
+bottom:     0.000000000000000
+cols3:      500
+rows3:      500
+depths:     1
+e-w resol3: 1
+n-s resol3: 1
+t-b resol:  1

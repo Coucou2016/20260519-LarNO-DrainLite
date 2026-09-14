@@ -1,0 +1,106 @@
+[
+  {
+    "sample": "global",
+    "pass": true,
+    "checks": [
+      {
+        "name": "run_coupled_simulation physics imports",
+        "pass": true,
+        "detail": "SurfaceFlowSimulation=True, sf_sim.step=True, DrainageSimulation=True, apply_coupling_to_nodes=True, surface-only swmm_inp=None=True"
+      }
+    ]
+  },
+  {
+    "sample": "sample1",
+    "pass": true,
+    "checks": [
+      {
+        "name": "SWMM DYNWAVE + COORDINATES + SUBCATCHMENTS",
+        "pass": true,
+        "detail": "DYNWAVE=True, COORDINATES=True, inp_subs=224, shp_subs=224"
+      },
+      {
+        "name": "DEM valid cells unchanged",
+        "pass": true,
+        "detail": "source [-0.755, 30.000], prepared valid [-0.755, 30.000], max_diff=0.000000"
+      },
+      {
+        "name": "Node/link counts vs shapefiles",
+        "pass": true,
+        "detail": "shp J=230 O=16 C=237 | inp J=230 O=16 C=237"
+      },
+      {
+        "name": "Runtime coupling effect",
+        "pass": true,
+        "detail": "identical_depths=False, drained=279m3, vol_s/vol_w=118986/77552, cells_swmm_lower=3429"
+      },
+      {
+        "name": "Simulation data integration log",
+        "pass": true,
+        "detail": "physics={'surface_solver': 'itzi.surfaceflow.SurfaceFlowSimulation', 'drainage_solver': 'SWMM DYNWAVE via pyswmm + DrainageSimulation'}, full=5, partial=4, missing=1/10"
+      }
+    ]
+  },
+  {
+    "sample": "sample2",
+    "pass": true,
+    "checks": [
+      {
+        "name": "SWMM DYNWAVE + COORDINATES + SUBCATCHMENTS",
+        "pass": true,
+        "detail": "DYNWAVE=True, COORDINATES=True, inp_subs=204, shp_subs=204"
+      },
+      {
+        "name": "DEM valid cells unchanged",
+        "pass": true,
+        "detail": "source [0.094, 22.585], prepared valid [0.094, 22.585], max_diff=0.000000"
+      },
+      {
+        "name": "Node/link counts vs shapefiles",
+        "pass": true,
+        "detail": "shp J=204 O=8 C=204 | inp J=204 O=8 C=204"
+      },
+      {
+        "name": "Runtime coupling effect",
+        "pass": true,
+        "detail": "identical_depths=False, drained=16959m3, vol_s/vol_w=87909/66374, cells_swmm_lower=2046"
+      },
+      {
+        "name": "Simulation data integration log",
+        "pass": true,
+        "detail": "physics={'surface_solver': 'itzi.surfaceflow.SurfaceFlowSimulation', 'drainage_solver': 'SWMM DYNWAVE via pyswmm + DrainageSimulation'}, full=5, partial=4, missing=1/10"
+      }
+    ]
+  },
+  {
+    "sample": "sample3",
+    "pass": true,
+    "checks": [
+      {
+        "name": "SWMM DYNWAVE + COORDINATES + SUBCATCHMENTS",
+        "pass": true,
+        "detail": "DYNWAVE=True, COORDINATES=True, inp_subs=142, shp_subs=142"
+      },
+      {
+        "name": "DEM valid cells unchanged",
+        "pass": true,
+        "detail": "source [1.613, 20.497], prepared valid [1.613, 20.497], max_diff=0.000000"
+      },
+      {
+        "name": "Node/link counts vs shapefiles",
+        "pass": true,
+        "detail": "shp J=142 O=5 C=142 | inp J=142 O=5 C=142"
+      },
+      {
+        "name": "Runtime coupling effect",
+        "pass": true,
+        "detail": "identical_depths=False, drained=2505m3, vol_s/vol_w=55824/34997, cells_swmm_lower=3465"
+      },
+      {
+        "name": "Simulation data integration log",
+        "pass": true,
+        "detail": "physics={'surface_solver': 'itzi.surfaceflow.SurfaceFlowSimulation', 'drainage_solver': 'SWMM DYNWAVE via pyswmm + DrainageSimulation'}, full=5, partial=4, missing=1/10"
+      }
+    ]
+  }
+]

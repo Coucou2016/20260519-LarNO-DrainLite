@@ -1,0 +1,17 @@
+# Versions recorded for the accepted reviewer-v3 workflow.
+numpy==2.4.5
+scipy==1.17.1
+matplotlib==3.10.9
+SciencePlots==2.2.2
+scikit-learn==1.8.0
+PySWMM==2.1.0
+swmm-toolkit==0.17.0
+beautifulsoup4
+Pillow
+pypdf
+joblib
+
+# The accepted coupled simulations used Itzi 25.4 in the copied formal model
+# environment. Install it using the platform-specific instructions retained in
+# external_models/20260518-itzi-flood rather than assuming a generic wheel.
+

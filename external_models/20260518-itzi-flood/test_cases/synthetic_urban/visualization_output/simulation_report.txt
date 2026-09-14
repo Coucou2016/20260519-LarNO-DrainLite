@@ -1,0 +1,15 @@
+============================================================
+  ITZI Flood Simulation - Results Report
+  Generated: 2026-05-18 12:25
+============================================================
+
+Test Case: Synthetic Urban Flood
+Domain: 500.0m x 500.0m at 5.0m resolution
+Grid: 100x100 cells
+Duration: 2.0 hours
+Record interval: 10 minutes
+Total rainfall: 50.0 mm
+
+Output files:
+  GRASS output location: E:\Projects\20260518-itzi-flood\test_cases\synthetic_urban\grassdata\synthetic_urban\PERMANENT
+  Visualization output: E:\Projects\20260518-itzi-flood\test_cases\synthetic_urban\visualization_output

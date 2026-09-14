@@ -1,0 +1,61 @@
+{
+  "input_file": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v3\\network\\swmm_gravity_capped_step05.inp",
+  "junctions": 2276,
+  "outfalls": 221,
+  "conduits": 2276,
+  "junctions_with_coordinates": 2276,
+  "outfalls_with_coordinates": 0,
+  "directed_junctions_reaching_outfall": 2276,
+  "directed_outfall_reachability_pct": 100.0,
+  "junctions_without_directed_outfall_path": 0,
+  "isolated_junctions": 0,
+  "directed_cycle_count": 0,
+  "duplicate_undirected_endpoint_groups": 0,
+  "excess_parallel_conduits": 0,
+  "zero_or_reverse_slope_conduits": 0,
+  "slope": {
+    "min": 0.0004985062490056077,
+    "median": 0.004863979562174367,
+    "p95": 0.05339666666666667,
+    "max": 0.10000223608595517
+  },
+  "length_m": {
+    "min": 20.0,
+    "median": 82.462,
+    "p95": 223.607,
+    "max": 490.306
+  },
+  "cover_depth_m": {
+    "min": 1.5,
+    "median": 1.5,
+    "p95": 2.174975,
+    "max": 7.4904
+  },
+  "diameter_m": {
+    "min": 0.8,
+    "median": 0.8,
+    "p95": 1.0,
+    "max": 1.2
+  },
+  "junction_in_degree": {
+    "min": 0.0,
+    "median": 1.0,
+    "p95": 3.0,
+    "max": 10.0
+  },
+  "junction_out_degree": {
+    "min": 1.0,
+    "median": 1.0,
+    "p95": 1.0,
+    "max": 1.0
+  },
+  "acceptance": {
+    "all_junctions_reach_outfall": true,
+    "no_isolated_junctions": true,
+    "no_cycles": true,
+    "no_parallel_endpoint_duplicates": true,
+    "all_conduits_positive_slope": true,
+    "cover_not_above_8m": true,
+    "outfalls_not_surface_coupled": true
+  }
+}

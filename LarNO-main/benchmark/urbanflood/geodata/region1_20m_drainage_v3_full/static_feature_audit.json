@@ -1,0 +1,32 @@
+{
+  "network": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v3\\network\\swmm_bidirectional_normal_step05.inp",
+  "shape": [
+    400,
+    560
+  ],
+  "cell_size_m": 20.0,
+  "active_cells": 105527,
+  "inlet_cells": 2276,
+  "pipe_cells": 8188,
+  "feature_names": [
+    "active_mask",
+    "capacity_density_7x7",
+    "dem",
+    "drain_inlet_count",
+    "drain_inlet_mask",
+    "inlet_density_7x7",
+    "network_degree",
+    "pipe_capacity",
+    "pipe_cover_depth",
+    "pipe_density_3x3",
+    "pipe_density_7x7",
+    "pipe_diameter",
+    "pipe_mask",
+    "pipe_segment_count",
+    "pipe_slope"
+  ],
+  "excluded_primary_features": [
+    "outfall_mask: synthetic receiving interfaces have no surface coordinates",
+    "distance_to_outfall: excluded to avoid implicit location encoding"
+  ]
+}

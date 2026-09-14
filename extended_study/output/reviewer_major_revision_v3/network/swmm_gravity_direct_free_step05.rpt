@@ -1,0 +1,255 @@
+
+  EPA STORM WATER MANAGEMENT MODEL - VERSION 5.2 (Build 5.2.4)
+  PYSWMM TOOLKIT API - VERSION v1.0 (2026-02-26)
+  ------------------------------------------------------------
+
+  Gravity-consistent road-derived conceptual drainage network 
+  
+  ****************
+  Analysis Options
+  ****************
+  Flow Units ............... CMS
+  Process Models:
+    Rainfall/Runoff ........ NO
+    RDII ................... NO
+    Snowmelt ............... NO
+    Groundwater ............ NO
+    Flow Routing ........... YES
+    Ponding Allowed ........ YES
+    Water Quality .......... NO
+  Flow Routing Method ...... DYNWAVE
+  Surcharge Method ......... SLOT
+  Starting Date ............ 01/01/2026 00:00:00
+  Ending Date .............. 01/01/2026 06:00:00
+  Antecedent Dry Days ...... 0.0
+  Report Time Step ......... 00:05:00
+  Routing Time Step ........ 0.50 sec
+  Variable Time Step ....... YES
+  Maximum Trials ........... 50
+  Number of Threads ........ 1
+  Head Tolerance ........... 0.001500 m
+  
+  
+  ERROR 141: Outfall N02090 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N00900 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N00251 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N00770 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N01379 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N01639 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N00855 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N02473 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N01260 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N01928 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N02181 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N01572 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N00711 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N02568 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N01849 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N00927 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N01873 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N00832 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N02144 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N02388 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N00887 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N00123 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N00175 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N01686 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N01782 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N01310 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N01549 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N00340 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N01561 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N00787 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N02472 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N02815 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N00829 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N00298 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N01825 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N01249 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N01657 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N01535 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N02721 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N00384 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N02444 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N01771 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N00013 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N00266 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N01338 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N01876 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N01669 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N02567 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N01082 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N01125 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N00084 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N02582 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N02640 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N01114 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N01715 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N01610 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N00979 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N01331 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N02261 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N02314 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N01452 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N00211 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N00425 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N00243 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N02809 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N00861 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N00268 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N01013 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N02441 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N02122 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N01838 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N01373 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N02318 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N00588 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N00450 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N00442 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N02724 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N00179 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N00045 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N01526 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N01440 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N02495 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N00653 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N00822 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N00494 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N00500 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N02825 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N02820 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N01469 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N02162 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N01471 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N00214 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N01335 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N01214 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N01390 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N02687 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N01776 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N01427 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N01344 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N01254 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N02121 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N02086 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N00125 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N02351 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N02800 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N00496 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N00326 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N01707 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N01648 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N01366 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N01809 has more than 1 inlet link or an outlet link.
+  
+  ERROR 141: Outfall N02787 has more than 1 inlet link or an outlet link.

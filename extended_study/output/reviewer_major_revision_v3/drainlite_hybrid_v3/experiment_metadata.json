@@ -1,0 +1,63 @@
+{
+  "created_at": "2026-09-04T14:40:01+0800",
+  "dataset": "region1_20m_drainage_v3_full",
+  "events": [
+    "event1",
+    "event20",
+    "event65",
+    "event66",
+    "event67",
+    "event68",
+    "event69",
+    "event70"
+  ],
+  "outer_validation": "leave one complete event out",
+  "inner_validation": "one complete event selected without test-event access",
+  "prior_leakage_control": "Held-event prior uses only seven outer-training events; every fitted row uses a prior averaged from other training events and excludes its own target.",
+  "groups": {
+    "clim_dynamic": [
+      "climatology_residual_mm",
+      "surface_depth_mm",
+      "rainfall_mm",
+      "cumulative_rainfall_mm",
+      "dem_m",
+      "dem_slope",
+      "time_norm",
+      "time_sin",
+      "time_cos",
+      "surface_depth_3x3_mean_mm",
+      "surface_depth_7x7_mean_mm"
+    ],
+    "clim_all_static": [
+      "climatology_residual_mm",
+      "surface_depth_mm",
+      "rainfall_mm",
+      "cumulative_rainfall_mm",
+      "dem_m",
+      "dem_slope",
+      "time_norm",
+      "time_sin",
+      "time_cos",
+      "surface_depth_3x3_mean_mm",
+      "surface_depth_7x7_mean_mm",
+      "drain_inlet_mask",
+      "pipe_mask",
+      "drain_inlet_count",
+      "pipe_segment_count",
+      "network_degree",
+      "pipe_density_3x3",
+      "pipe_density_7x7",
+      "inlet_density_7x7",
+      "pipe_diameter",
+      "pipe_slope",
+      "pipe_capacity",
+      "pipe_cover_depth",
+      "capacity_density_7x7"
+    ]
+  },
+  "pixels_per_step": 450,
+  "total_seconds": 769.5297233000019,
+  "peak_rss_mb": 3491.56640625,
+  "platform": "Windows-10-10.0.17763-SP0",
+  "logical_cpu_count": 40
+}

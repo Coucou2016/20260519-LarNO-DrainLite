@@ -1,0 +1,66 @@
+# Local caches, temporary builds, and browser profiles
+/cache/
+/tmp/
+**/cache/
+**/__pycache__/
+**/*.py[cod]
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ipynb_checkpoints/
+**/.browser_pdf_profile/
+**/chrome-profile/
+**/chrome-profile-*/
+**/Crashpad/
+
+# Credentials and machine-local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.pfx
+*.key
+credentials.json
+
+# Third-party installers and redundant download archives
+*.exe
+*.msi
+/LarNO.zip
+/exp_weights.zip
+/LarNO-main/benchmark.zip
+
+# Reference article supplied for reading, not redistributed by this project
+/main (7).md
+/main (7).pdf
+
+# Superseded working copies. Canonical documents are in submission_package_v3.
+/paper_draft/
+/report.html
+/report.md
+/report.pdf
+
+# Generated outputs are ignored by default. Canonical final outputs are force-added.
+/extended_study/output/
+
+# Public LarNO benchmark/checkpoints are ignored by the upstream project. The
+# canonical v3 dataset and audited checkpoint are force-added for this snapshot.
+/LarNO-main/benchmark/
+/LarNO-main/exp/
+
+# Duplicate Itzi workspace and third-party benchmark fixtures.
+/itzi-flood/
+/external_models/20260518-itzi-flood/benchmark_data/
+/external_models/20260518-itzi-flood/WinGRASS-8.4.2-1-Setup.exe
+
+# Shenzhen inputs/outputs duplicated by the canonical drainage_v3 dataset.
+/external_models/20260518-itzi-flood/test_cases/shenzhen_region1/input_data/flood/
+/external_models/20260518-itzi-flood/test_cases/shenzhen_region1/output/
+/external_models/20260518-itzi-flood/test_cases/shenzhen_region1/visualization_output/
+
+# Operating-system and editor artifacts
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+*.swo

@@ -1,0 +1,514 @@
+[
+  {
+    "fold": 0,
+    "test_event": "event1",
+    "model": "clim_dynamic",
+    "inner_training_events": [
+      "event65",
+      "event66",
+      "event67",
+      "event68",
+      "event69",
+      "event70"
+    ],
+    "inner_validation_event": "event20",
+    "scores": [
+      {
+        "max_iter": 80,
+        "validation_mae_mm": 2.912444085031977
+      },
+      {
+        "max_iter": 140,
+        "validation_mae_mm": 2.746672807829949
+      },
+      {
+        "max_iter": 220,
+        "validation_mae_mm": 2.6563738938157564
+      }
+    ],
+    "selected_max_iter": 220,
+    "refit_rows": 226800,
+    "fit_seconds": 1.987321000007796,
+    "prior_encoding": "leave-one-event-out for every fitted event"
+  },
+  {
+    "fold": 0,
+    "test_event": "event1",
+    "model": "clim_all_static",
+    "inner_training_events": [
+      "event65",
+      "event66",
+      "event67",
+      "event68",
+      "event69",
+      "event70"
+    ],
+    "inner_validation_event": "event20",
+    "scores": [
+      {
+        "max_iter": 80,
+        "validation_mae_mm": 2.8729910999979325
+      },
+      {
+        "max_iter": 140,
+        "validation_mae_mm": 2.688296463723582
+      },
+      {
+        "max_iter": 220,
+        "validation_mae_mm": 2.5726103428826836
+      }
+    ],
+    "selected_max_iter": 220,
+    "refit_rows": 226800,
+    "fit_seconds": 2.6597738999989815,
+    "prior_encoding": "leave-one-event-out for every fitted event"
+  },
+  {
+    "fold": 1,
+    "test_event": "event20",
+    "model": "clim_dynamic",
+    "inner_training_events": [
+      "event1",
+      "event66",
+      "event67",
+      "event68",
+      "event69",
+      "event70"
+    ],
+    "inner_validation_event": "event65",
+    "scores": [
+      {
+        "max_iter": 80,
+        "validation_mae_mm": 2.5836060804286447
+      },
+      {
+        "max_iter": 140,
+        "validation_mae_mm": 2.4167126933272884
+      },
+      {
+        "max_iter": 220,
+        "validation_mae_mm": 2.323401842906787
+      }
+    ],
+    "selected_max_iter": 220,
+    "refit_rows": 226800,
+    "fit_seconds": 1.809886799994274,
+    "prior_encoding": "leave-one-event-out for every fitted event"
+  },
+  {
+    "fold": 1,
+    "test_event": "event20",
+    "model": "clim_all_static",
+    "inner_training_events": [
+      "event1",
+      "event66",
+      "event67",
+      "event68",
+      "event69",
+      "event70"
+    ],
+    "inner_validation_event": "event65",
+    "scores": [
+      {
+        "max_iter": 80,
+        "validation_mae_mm": 2.523348539474512
+      },
+      {
+        "max_iter": 140,
+        "validation_mae_mm": 2.3404830335393445
+      },
+      {
+        "max_iter": 220,
+        "validation_mae_mm": 2.25939577807269
+      }
+    ],
+    "selected_max_iter": 220,
+    "refit_rows": 226800,
+    "fit_seconds": 2.554941599999438,
+    "prior_encoding": "leave-one-event-out for every fitted event"
+  },
+  {
+    "fold": 2,
+    "test_event": "event65",
+    "model": "clim_dynamic",
+    "inner_training_events": [
+      "event1",
+      "event20",
+      "event67",
+      "event68",
+      "event69",
+      "event70"
+    ],
+    "inner_validation_event": "event66",
+    "scores": [
+      {
+        "max_iter": 80,
+        "validation_mae_mm": 3.0698125799794878
+      },
+      {
+        "max_iter": 140,
+        "validation_mae_mm": 2.95646558571066
+      },
+      {
+        "max_iter": 220,
+        "validation_mae_mm": 2.9440781635477613
+      }
+    ],
+    "selected_max_iter": 220,
+    "refit_rows": 226800,
+    "fit_seconds": 1.8169969000009587,
+    "prior_encoding": "leave-one-event-out for every fitted event"
+  },
+  {
+    "fold": 2,
+    "test_event": "event65",
+    "model": "clim_all_static",
+    "inner_training_events": [
+      "event1",
+      "event20",
+      "event67",
+      "event68",
+      "event69",
+      "event70"
+    ],
+    "inner_validation_event": "event66",
+    "scores": [
+      {
+        "max_iter": 80,
+        "validation_mae_mm": 3.003130144249733
+      },
+      {
+        "max_iter": 140,
+        "validation_mae_mm": 2.8794949929367135
+      },
+      {
+        "max_iter": 220,
+        "validation_mae_mm": 2.8662061997004082
+      }
+    ],
+    "selected_max_iter": 220,
+    "refit_rows": 226800,
+    "fit_seconds": 2.984231999987969,
+    "prior_encoding": "leave-one-event-out for every fitted event"
+  },
+  {
+    "fold": 3,
+    "test_event": "event66",
+    "model": "clim_dynamic",
+    "inner_training_events": [
+      "event1",
+      "event20",
+      "event65",
+      "event68",
+      "event69",
+      "event70"
+    ],
+    "inner_validation_event": "event67",
+    "scores": [
+      {
+        "max_iter": 80,
+        "validation_mae_mm": 2.634191659273767
+      },
+      {
+        "max_iter": 140,
+        "validation_mae_mm": 2.4088042091400887
+      },
+      {
+        "max_iter": 220,
+        "validation_mae_mm": 2.355170163347011
+      }
+    ],
+    "selected_max_iter": 220,
+    "refit_rows": 226800,
+    "fit_seconds": 1.8891257000068435,
+    "prior_encoding": "leave-one-event-out for every fitted event"
+  },
+  {
+    "fold": 3,
+    "test_event": "event66",
+    "model": "clim_all_static",
+    "inner_training_events": [
+      "event1",
+      "event20",
+      "event65",
+      "event68",
+      "event69",
+      "event70"
+    ],
+    "inner_validation_event": "event67",
+    "scores": [
+      {
+        "max_iter": 80,
+        "validation_mae_mm": 2.625702866327527
+      },
+      {
+        "max_iter": 140,
+        "validation_mae_mm": 2.412879029353497
+      },
+      {
+        "max_iter": 220,
+        "validation_mae_mm": 2.3557711452685095
+      }
+    ],
+    "selected_max_iter": 220,
+    "refit_rows": 226800,
+    "fit_seconds": 2.4999824999977136,
+    "prior_encoding": "leave-one-event-out for every fitted event"
+  },
+  {
+    "fold": 4,
+    "test_event": "event67",
+    "model": "clim_dynamic",
+    "inner_training_events": [
+      "event1",
+      "event20",
+      "event65",
+      "event66",
+      "event69",
+      "event70"
+    ],
+    "inner_validation_event": "event68",
+    "scores": [
+      {
+        "max_iter": 80,
+        "validation_mae_mm": 2.7111351812280913
+      },
+      {
+        "max_iter": 140,
+        "validation_mae_mm": 2.484847454402896
+      },
+      {
+        "max_iter": 220,
+        "validation_mae_mm": 2.4260618650500203
+      }
+    ],
+    "selected_max_iter": 220,
+    "refit_rows": 226800,
+    "fit_seconds": 1.797927499996149,
+    "prior_encoding": "leave-one-event-out for every fitted event"
+  },
+  {
+    "fold": 4,
+    "test_event": "event67",
+    "model": "clim_all_static",
+    "inner_training_events": [
+      "event1",
+      "event20",
+      "event65",
+      "event66",
+      "event69",
+      "event70"
+    ],
+    "inner_validation_event": "event68",
+    "scores": [
+      {
+        "max_iter": 80,
+        "validation_mae_mm": 2.672876096807894
+      },
+      {
+        "max_iter": 140,
+        "validation_mae_mm": 2.460794048869812
+      },
+      {
+        "max_iter": 220,
+        "validation_mae_mm": 2.392374256714896
+      }
+    ],
+    "selected_max_iter": 220,
+    "refit_rows": 226800,
+    "fit_seconds": 2.579172199999448,
+    "prior_encoding": "leave-one-event-out for every fitted event"
+  },
+  {
+    "fold": 5,
+    "test_event": "event68",
+    "model": "clim_dynamic",
+    "inner_training_events": [
+      "event1",
+      "event20",
+      "event65",
+      "event66",
+      "event67",
+      "event70"
+    ],
+    "inner_validation_event": "event69",
+    "scores": [
+      {
+        "max_iter": 80,
+        "validation_mae_mm": 2.5545384864663006
+      },
+      {
+        "max_iter": 140,
+        "validation_mae_mm": 2.3629214959384104
+      },
+      {
+        "max_iter": 220,
+        "validation_mae_mm": 2.3389156559916384
+      }
+    ],
+    "selected_max_iter": 220,
+    "refit_rows": 226800,
+    "fit_seconds": 1.9474017999891657,
+    "prior_encoding": "leave-one-event-out for every fitted event"
+  },
+  {
+    "fold": 5,
+    "test_event": "event68",
+    "model": "clim_all_static",
+    "inner_training_events": [
+      "event1",
+      "event20",
+      "event65",
+      "event66",
+      "event67",
+      "event70"
+    ],
+    "inner_validation_event": "event69",
+    "scores": [
+      {
+        "max_iter": 80,
+        "validation_mae_mm": 2.5238896281855783
+      },
+      {
+        "max_iter": 140,
+        "validation_mae_mm": 2.3507131847801426
+      },
+      {
+        "max_iter": 220,
+        "validation_mae_mm": 2.321735139813062
+      }
+    ],
+    "selected_max_iter": 220,
+    "refit_rows": 226800,
+    "fit_seconds": 2.3991432000038913,
+    "prior_encoding": "leave-one-event-out for every fitted event"
+  },
+  {
+    "fold": 6,
+    "test_event": "event69",
+    "model": "clim_dynamic",
+    "inner_training_events": [
+      "event1",
+      "event20",
+      "event65",
+      "event66",
+      "event67",
+      "event68"
+    ],
+    "inner_validation_event": "event70",
+    "scores": [
+      {
+        "max_iter": 80,
+        "validation_mae_mm": 2.5414001640799606
+      },
+      {
+        "max_iter": 140,
+        "validation_mae_mm": 2.3207045400152415
+      },
+      {
+        "max_iter": 220,
+        "validation_mae_mm": 2.2341128422620864
+      }
+    ],
+    "selected_max_iter": 220,
+    "refit_rows": 226800,
+    "fit_seconds": 1.7295154000021284,
+    "prior_encoding": "leave-one-event-out for every fitted event"
+  },
+  {
+    "fold": 6,
+    "test_event": "event69",
+    "model": "clim_all_static",
+    "inner_training_events": [
+      "event1",
+      "event20",
+      "event65",
+      "event66",
+      "event67",
+      "event68"
+    ],
+    "inner_validation_event": "event70",
+    "scores": [
+      {
+        "max_iter": 80,
+        "validation_mae_mm": 2.5280181627095986
+      },
+      {
+        "max_iter": 140,
+        "validation_mae_mm": 2.3392766166187657
+      },
+      {
+        "max_iter": 220,
+        "validation_mae_mm": 2.2654063140904235
+      }
+    ],
+    "selected_max_iter": 220,
+    "refit_rows": 226800,
+    "fit_seconds": 2.3491075999918394,
+    "prior_encoding": "leave-one-event-out for every fitted event"
+  },
+  {
+    "fold": 7,
+    "test_event": "event70",
+    "model": "clim_dynamic",
+    "inner_training_events": [
+      "event20",
+      "event65",
+      "event66",
+      "event67",
+      "event68",
+      "event69"
+    ],
+    "inner_validation_event": "event1",
+    "scores": [
+      {
+        "max_iter": 80,
+        "validation_mae_mm": 2.480846187371442
+      },
+      {
+        "max_iter": 140,
+        "validation_mae_mm": 2.3578075020829763
+      },
+      {
+        "max_iter": 220,
+        "validation_mae_mm": 2.328918401606199
+      }
+    ],
+    "selected_max_iter": 220,
+    "refit_rows": 226800,
+    "fit_seconds": 1.7561120999889681,
+    "prior_encoding": "leave-one-event-out for every fitted event"
+  },
+  {
+    "fold": 7,
+    "test_event": "event70",
+    "model": "clim_all_static",
+    "inner_training_events": [
+      "event20",
+      "event65",
+      "event66",
+      "event67",
+      "event68",
+      "event69"
+    ],
+    "inner_validation_event": "event1",
+    "scores": [
+      {
+        "max_iter": 80,
+        "validation_mae_mm": 2.4207977130918903
+      },
+      {
+        "max_iter": 140,
+        "validation_mae_mm": 2.2868342016094227
+      },
+      {
+        "max_iter": 220,
+        "validation_mae_mm": 2.2317310698296
+      }
+    ],
+    "selected_max_iter": 220,
+    "refit_rows": 226800,
+    "fit_seconds": 2.371400199990603,
+    "prior_encoding": "leave-one-event-out for every fitted event"
+  }
+]

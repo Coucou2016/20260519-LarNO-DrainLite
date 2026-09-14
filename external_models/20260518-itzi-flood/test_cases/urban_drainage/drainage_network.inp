@@ -1,0 +1,106 @@
+[TITLE]
+Urban District Storm Drainage Network
+
+[OPTIONS]
+FLOW_UNITS           CMS
+FLOW_ROUTING         DYNWAVE
+START_DATE           01/01/2026
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2026
+REPORT_START_TIME    00:00:00
+END_DATE             01/01/2026
+END_TIME             02:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:10:00
+WET_STEP             00:01:00
+DRY_STEP             00:05:00
+ROUTING_STEP         0:00:05
+ALLOW_PONDING        NO
+INERTIAL_DAMPING     PARTIAL
+VARIABLE_STEP        0.75
+MINIMUM_STEP         0.5
+THREADS              1
+
+[EVAPORATION]
+CONSTANT         0.0
+DRY_ONLY         NO
+
+[JUNCTIONS]
+M_01        46.00    2.0       0.0        0.0         0.0
+M_02        46.30    2.0       0.0        0.0         0.0
+M_03        46.60    2.0       0.0        0.0         0.0
+M_04        46.90    2.0       0.0        0.0         0.0
+M_05        47.20    2.0       0.0        0.0         0.0
+M_06        47.50    2.0       0.0        0.0         0.0
+B_07        46.20    1.5       0.0        0.0         0.0
+B_08        46.20    1.5       0.0        0.0         0.0
+B_09        46.80    1.5       0.0        0.0         0.0
+B_10        46.80    1.5       0.0        0.0         0.0
+B_11        46.20    1.5       0.0        0.0         0.0
+B_12        46.20    1.5       0.0        0.0         0.0
+B_13        46.80    1.5       0.0        0.0         0.0
+B_14        46.80    1.5       0.0        0.0         0.0
+
+[OUTFALLS]
+Outfall_01    46.0    FREE    NO
+
+[CONDUITS]
+C_M01    M_01   M_02    60      0.013      0      0       0         0
+C_M02    M_02   M_03    60      0.013      0      0       0         0
+C_M03    M_03   M_04    60      0.013      0      0       0         0
+C_M04    M_04   M_05    60      0.013      0      0       0         0
+C_M05    M_05   M_06    60      0.013      0      0       0         0
+C_out    M_06   Outfall_01  50   0.013      0      0       0         0
+C_B07    B_07   M_02    80      0.013      0      0       0         0
+C_B08    B_08   M_02    80      0.013      0      0       0         0
+C_B09    B_09   M_03    80      0.013      0      0       0         0
+C_B10    B_10   M_03    80      0.013      0      0       0         0
+C_B11    B_11   M_05    80      0.013      0      0       0         0
+C_B12    B_12   M_05    80      0.013      0      0       0         0
+C_B13    B_13   M_04    80      0.013      0      0       0         0
+C_B14    B_14   M_04    80      0.013      0      0       0         0
+
+[XSECTIONS]
+C_M01        CIRCULAR    0.6    0      0      0      1
+C_M02        CIRCULAR    0.6    0      0      0      1
+C_M03        CIRCULAR    0.6    0      0      0      1
+C_M04        CIRCULAR    0.6    0      0      0      1
+C_M05        CIRCULAR    0.6    0      0      0      1
+C_out        CIRCULAR    0.8    0      0      0      1
+C_B07        CIRCULAR    0.4    0      0      0      1
+C_B08        CIRCULAR    0.4    0      0      0      1
+C_B09        CIRCULAR    0.4    0      0      0      1
+C_B10        CIRCULAR    0.4    0      0      0      1
+C_B11        CIRCULAR    0.4    0      0      0      1
+C_B12        CIRCULAR    0.4    0      0      0      1
+C_B13        CIRCULAR    0.4    0      0      0      1
+C_B14        CIRCULAR    0.4    0      0      0      1
+
+[COORDINATES]
+M_01          200.0       350.0
+M_02          200.0       290.0
+M_03          200.0       230.0
+M_04          200.0       170.0
+M_05          200.0       110.0
+M_06          200.0       50.0
+B_07          80.0       320.0
+B_08          140.0       320.0
+B_09          80.0       200.0
+B_10          140.0       200.0
+B_11          260.0       320.0
+B_12          320.0       320.0
+B_13          260.0       200.0
+B_14          320.0       200.0
+Outfall_01      200.0       10.0
+
+[TAGS]
+
+[MAP]
+
+[REPORT]
+INPUT      NO
+CONTROLS   NO
+NODES ALL
+LINKS ALL

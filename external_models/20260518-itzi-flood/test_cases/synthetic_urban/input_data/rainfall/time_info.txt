@@ -1,0 +1,25 @@
+# Rain maps with start times (minutes from simulation start)
+rain_0000.asc	0
+rain_0001.asc	5
+rain_0002.asc	10
+rain_0003.asc	15
+rain_0004.asc	20
+rain_0005.asc	25
+rain_0006.asc	30
+rain_0007.asc	35
+rain_0008.asc	40
+rain_0009.asc	45
+rain_0010.asc	50
+rain_0011.asc	55
+rain_0012.asc	60
+rain_0013.asc	65
+rain_0014.asc	70
+rain_0015.asc	75
+rain_0016.asc	80
+rain_0017.asc	85
+rain_0018.asc	90
+rain_0019.asc	95
+rain_0020.asc	100
+rain_0021.asc	105
+rain_0022.asc	110
+rain_0023.asc	115

@@ -1,0 +1,17 @@
+{
+  "dataset_name": "region1_20m_drainage_v3_full",
+  "accepted_events": [
+    "event1",
+    "event20",
+    "event65",
+    "event66",
+    "event67",
+    "event68",
+    "event69",
+    "event70"
+  ],
+  "rejected_events": [],
+  "target_definition": "h_itzi_swmm - h_itzi_surface_matched (C-B)",
+  "roughness_control": "h_itzi_surface_matched - h_itzi_surface (B-A)",
+  "mike_role": "external full-domain plausibility reference; not a training label"
+}

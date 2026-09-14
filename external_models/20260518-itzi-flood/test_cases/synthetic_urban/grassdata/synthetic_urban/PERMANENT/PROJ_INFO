@@ -1,0 +1,6 @@
+name: WGS 84 / UTM zone 50N
+datum: wgs84
+ellps: wgs84
+proj: utm
+zone: 50
+no_defs: defined

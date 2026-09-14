@@ -1,0 +1,960 @@
+{
+  "status": "PASS",
+  "events": [
+    "event1",
+    "event20",
+    "event65",
+    "event66",
+    "event67",
+    "event68",
+    "event69",
+    "event70"
+  ],
+  "checks_total": 107,
+  "checks_passed": 107,
+  "failures": [],
+  "checks": [
+    {
+      "check": "active_cell_count",
+      "value": 105527,
+      "expected": 105527,
+      "pass": true
+    },
+    {
+      "check": "static:active_mask.npy",
+      "shape": [
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "static:capacity_density_7x7.npy",
+      "shape": [
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "static:dem.npy",
+      "shape": [
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "static:drain_inlet_count.npy",
+      "shape": [
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "static:drain_inlet_mask.npy",
+      "shape": [
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "static:inlet_density_7x7.npy",
+      "shape": [
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "static:network_degree.npy",
+      "shape": [
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "static:pipe_capacity.npy",
+      "shape": [
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "static:pipe_cover_depth.npy",
+      "shape": [
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "static:pipe_density_3x3.npy",
+      "shape": [
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "static:pipe_density_7x7.npy",
+      "shape": [
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "static:pipe_diameter.npy",
+      "shape": [
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "static:pipe_mask.npy",
+      "shape": [
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "static:pipe_segment_count.npy",
+      "shape": [
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "static:pipe_slope.npy",
+      "shape": [
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "event_array:event1:rainfall.npy",
+      "shape": [
+        72,
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "event_array:event1:h_itzi_surface.npy",
+      "shape": [
+        72,
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "event_array:event1:h_itzi_surface_matched.npy",
+      "shape": [
+        72,
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "event_array:event1:h_itzi_swmm.npy",
+      "shape": [
+        72,
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "event_array:event1:h_mike_ref.npy",
+      "shape": [
+        72,
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "event_array:event1:h.npy",
+      "shape": [
+        72,
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "target_alias:event1",
+      "pass": true
+    },
+    {
+      "check": "physical_metric_recompute:event1",
+      "mae_mm": 7.200066566467285,
+      "signed_mm": -5.9521803855896,
+      "pass": true
+    },
+    {
+      "check": "hybrid_metric_recompute:event1",
+      "mae_mm": 2.196784734725952,
+      "rmse_mm": 9.148982048034668,
+      "csi_0p03": 0.9190963392717321,
+      "csi_0p15": 0.8829693878848771,
+      "final_volume_error_m3": 26649.326878735883,
+      "nonnegative": true,
+      "pass": true
+    },
+    {
+      "check": "event_array:event20:rainfall.npy",
+      "shape": [
+        72,
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "event_array:event20:h_itzi_surface.npy",
+      "shape": [
+        72,
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "event_array:event20:h_itzi_surface_matched.npy",
+      "shape": [
+        72,
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "event_array:event20:h_itzi_swmm.npy",
+      "shape": [
+        72,
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "event_array:event20:h_mike_ref.npy",
+      "shape": [
+        72,
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "event_array:event20:h.npy",
+      "shape": [
+        72,
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "target_alias:event20",
+      "pass": true
+    },
+    {
+      "check": "physical_metric_recompute:event20",
+      "mae_mm": 3.321641206741333,
+      "signed_mm": -2.672626256942749,
+      "pass": true
+    },
+    {
+      "check": "hybrid_metric_recompute:event20",
+      "mae_mm": 2.046964645385742,
+      "rmse_mm": 8.411293983459473,
+      "csi_0p03": 0.8739966060223371,
+      "csi_0p15": 0.84306286729616,
+      "final_volume_error_m3": 26638.38400207642,
+      "nonnegative": true,
+      "pass": true
+    },
+    {
+      "check": "event_array:event65:rainfall.npy",
+      "shape": [
+        72,
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "event_array:event65:h_itzi_surface.npy",
+      "shape": [
+        72,
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "event_array:event65:h_itzi_surface_matched.npy",
+      "shape": [
+        72,
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "event_array:event65:h_itzi_swmm.npy",
+      "shape": [
+        72,
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "event_array:event65:h_mike_ref.npy",
+      "shape": [
+        72,
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "event_array:event65:h.npy",
+      "shape": [
+        72,
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "target_alias:event65",
+      "pass": true
+    },
+    {
+      "check": "physical_metric_recompute:event65",
+      "mae_mm": 7.695992469787598,
+      "signed_mm": -6.402800559997559,
+      "pass": true
+    },
+    {
+      "check": "hybrid_metric_recompute:event65",
+      "mae_mm": 2.171098232269287,
+      "rmse_mm": 8.872180938720703,
+      "csi_0p03": 0.9333431532457206,
+      "csi_0p15": 0.9006452568072743,
+      "final_volume_error_m3": 27901.883952799835,
+      "nonnegative": true,
+      "pass": true
+    },
+    {
+      "check": "event_array:event66:rainfall.npy",
+      "shape": [
+        72,
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "event_array:event66:h_itzi_surface.npy",
+      "shape": [
+        72,
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "event_array:event66:h_itzi_surface_matched.npy",
+      "shape": [
+        72,
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "event_array:event66:h_itzi_swmm.npy",
+      "shape": [
+        72,
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "event_array:event66:h_mike_ref.npy",
+      "shape": [
+        72,
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "event_array:event66:h.npy",
+      "shape": [
+        72,
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "target_alias:event66",
+      "pass": true
+    },
+    {
+      "check": "physical_metric_recompute:event66",
+      "mae_mm": 8.430887222290039,
+      "signed_mm": -7.0861592292785645,
+      "pass": true
+    },
+    {
+      "check": "hybrid_metric_recompute:event66",
+      "mae_mm": 2.232757806777954,
+      "rmse_mm": 8.6602783203125,
+      "csi_0p03": 0.9354775263572577,
+      "csi_0p15": 0.90034251252024,
+      "final_volume_error_m3": 60002.68419578115,
+      "nonnegative": true,
+      "pass": true
+    },
+    {
+      "check": "event_array:event67:rainfall.npy",
+      "shape": [
+        72,
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "event_array:event67:h_itzi_surface.npy",
+      "shape": [
+        72,
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "event_array:event67:h_itzi_surface_matched.npy",
+      "shape": [
+        72,
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "event_array:event67:h_itzi_swmm.npy",
+      "shape": [
+        72,
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "event_array:event67:h_mike_ref.npy",
+      "shape": [
+        72,
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "event_array:event67:h.npy",
+      "shape": [
+        72,
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "target_alias:event67",
+      "pass": true
+    },
+    {
+      "check": "physical_metric_recompute:event67",
+      "mae_mm": 12.63111686706543,
+      "signed_mm": -10.927658081054688,
+      "pass": true
+    },
+    {
+      "check": "hybrid_metric_recompute:event67",
+      "mae_mm": 2.494992971420288,
+      "rmse_mm": 11.897904396057129,
+      "csi_0p03": 0.9403472365924531,
+      "csi_0p15": 0.9252280895769975,
+      "final_volume_error_m3": 45550.85861967673,
+      "nonnegative": true,
+      "pass": true
+    },
+    {
+      "check": "event_array:event68:rainfall.npy",
+      "shape": [
+        72,
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "event_array:event68:h_itzi_surface.npy",
+      "shape": [
+        72,
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "event_array:event68:h_itzi_surface_matched.npy",
+      "shape": [
+        72,
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "event_array:event68:h_itzi_swmm.npy",
+      "shape": [
+        72,
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "event_array:event68:h_mike_ref.npy",
+      "shape": [
+        72,
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "event_array:event68:h.npy",
+      "shape": [
+        72,
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "target_alias:event68",
+      "pass": true
+    },
+    {
+      "check": "physical_metric_recompute:event68",
+      "mae_mm": 11.913520812988281,
+      "signed_mm": -10.10129165649414,
+      "pass": true
+    },
+    {
+      "check": "hybrid_metric_recompute:event68",
+      "mae_mm": 2.005976438522339,
+      "rmse_mm": 9.357478141784668,
+      "csi_0p03": 0.9484144538150237,
+      "csi_0p15": 0.9348000184488694,
+      "final_volume_error_m3": 5030.054685577306,
+      "nonnegative": true,
+      "pass": true
+    },
+    {
+      "check": "event_array:event69:rainfall.npy",
+      "shape": [
+        72,
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "event_array:event69:h_itzi_surface.npy",
+      "shape": [
+        72,
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "event_array:event69:h_itzi_surface_matched.npy",
+      "shape": [
+        72,
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "event_array:event69:h_itzi_swmm.npy",
+      "shape": [
+        72,
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "event_array:event69:h_mike_ref.npy",
+      "shape": [
+        72,
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "event_array:event69:h.npy",
+      "shape": [
+        72,
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "target_alias:event69",
+      "pass": true
+    },
+    {
+      "check": "physical_metric_recompute:event69",
+      "mae_mm": 10.911508560180664,
+      "signed_mm": -9.419600486755371,
+      "pass": true
+    },
+    {
+      "check": "hybrid_metric_recompute:event69",
+      "mae_mm": 1.922047734260559,
+      "rmse_mm": 8.577720642089844,
+      "csi_0p03": 0.9449662652175691,
+      "csi_0p15": 0.9336441027885768,
+      "final_volume_error_m3": 17828.51342744125,
+      "nonnegative": true,
+      "pass": true
+    },
+    {
+      "check": "event_array:event70:rainfall.npy",
+      "shape": [
+        72,
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "event_array:event70:h_itzi_surface.npy",
+      "shape": [
+        72,
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "event_array:event70:h_itzi_surface_matched.npy",
+      "shape": [
+        72,
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "event_array:event70:h_itzi_swmm.npy",
+      "shape": [
+        72,
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "event_array:event70:h_mike_ref.npy",
+      "shape": [
+        72,
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "event_array:event70:h.npy",
+      "shape": [
+        72,
+        400,
+        560
+      ],
+      "finite": true,
+      "pass": true
+    },
+    {
+      "check": "target_alias:event70",
+      "pass": true
+    },
+    {
+      "check": "physical_metric_recompute:event70",
+      "mae_mm": 12.02267074584961,
+      "signed_mm": -10.318780899047852,
+      "pass": true
+    },
+    {
+      "check": "hybrid_metric_recompute:event70",
+      "mae_mm": 1.9682862758636475,
+      "rmse_mm": 9.031126976013184,
+      "csi_0p03": 0.9496316863909549,
+      "csi_0p15": 0.9373663661354904,
+      "final_volume_error_m3": 7331.0321558919895,
+      "nonnegative": true,
+      "pass": true
+    },
+    {
+      "check": "hybrid_macro_mae_recompute",
+      "mae_mm": 2.129863604903221,
+      "pass": true
+    },
+    {
+      "check": "network_acceptance",
+      "criteria": {
+        "all_junctions_reach_outfall": true,
+        "no_isolated_junctions": true,
+        "no_cycles": true,
+        "no_parallel_endpoint_duplicates": true,
+        "all_conduits_positive_slope": true,
+        "all_pipe_crowns_below_junction_rims": true,
+        "cover_not_above_8m": true,
+        "outfall_nodes_identifiable_by_type": true,
+        "outfall_boundary_defined": true,
+        "fixed_tailwater_consistent_when_used": true,
+        "swmm_ponding_disabled_for_2d_coupling": true,
+        "positive_surcharge_headroom_for_bidirectional_exchange": true
+      },
+      "pass": true
+    },
+    {
+      "check": "standalone_html:manuscript",
+      "images": 11,
+      "bytes": 13726484,
+      "pass": true
+    },
+    {
+      "check": "pdf:manuscript",
+      "pages": 17,
+      "bytes": 9075535,
+      "replacement_chars": 0,
+      "pass": true
+    },
+    {
+      "check": "standalone_html:report",
+      "images": 11,
+      "bytes": 13708436,
+      "pass": true
+    },
+    {
+      "check": "pdf:report",
+      "pages": 13,
+      "bytes": 9418190,
+      "replacement_chars": 0,
+      "pass": true
+    },
+    {
+      "check": "standalone_html:scientific_integrity_audit",
+      "images": 0,
+      "bytes": 11256,
+      "pass": true
+    },
+    {
+      "check": "pdf:scientific_integrity_audit",
+      "pages": 4,
+      "bytes": 104172,
+      "replacement_chars": 0,
+      "pass": true
+    },
+    {
+      "check": "figure_png:01",
+      "count": 1,
+      "dimensions": [
+        2838,
+        1598
+      ],
+      "pass": true
+    },
+    {
+      "check": "figure_png:02",
+      "count": 1,
+      "dimensions": [
+        2988,
+        2459
+      ],
+      "pass": true
+    },
+    {
+      "check": "figure_png:03",
+      "count": 1,
+      "dimensions": [
+        2838,
+        2158
+      ],
+      "pass": true
+    },
+    {
+      "check": "figure_png:04",
+      "count": 1,
+      "dimensions": [
+        2838,
+        3358
+      ],
+      "pass": true
+    },
+    {
+      "check": "figure_png:05",
+      "count": 1,
+      "dimensions": [
+        2248,
+        1472
+      ],
+      "pass": true
+    },
+    {
+      "check": "figure_png:06",
+      "count": 1,
+      "dimensions": [
+        2838,
+        3278
+      ],
+      "pass": true
+    },
+    {
+      "check": "figure_png:07",
+      "count": 1,
+      "dimensions": [
+        2837,
+        1238
+      ],
+      "pass": true
+    },
+    {
+      "check": "figure_png:08",
+      "count": 1,
+      "dimensions": [
+        2837,
+        1278
+      ],
+      "pass": true
+    },
+    {
+      "check": "figure_png:09",
+      "count": 1,
+      "dimensions": [
+        2835,
+        1238
+      ],
+      "pass": true
+    },
+    {
+      "check": "figure_png:10",
+      "count": 1,
+      "dimensions": [
+        2834,
+        993
+      ],
+      "pass": true
+    },
+    {
+      "check": "figure_png:11",
+      "count": 1,
+      "dimensions": [
+        2836,
+        1118
+      ],
+      "pass": true
+    }
+  ]
+}

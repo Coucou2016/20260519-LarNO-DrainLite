@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Scientific integrity and reproducibility audit</title>
+<style>
+  @page { size: A4; margin: 18mm 17mm 19mm; }
+  body { max-width: 178mm; margin: 0 auto; color: #111827; font-family: "Times New Roman", "SimSun", "Songti SC", serif; font-size: 10.5pt; line-height: 1.48; }
+  h1 { font-size: 20pt; line-height: 1.18; color: #111827; margin: 0 0 16px; text-align: center; letter-spacing: 0; }
+  h2 { font-size: 14.5pt; color: #111827; border-bottom: 0.7pt solid #9ca3af; padding-bottom: 4px; margin: 25px 0 9px; letter-spacing: 0; }
+  h3 { font-size: 11.5pt; color: #111827; margin: 18px 0 6px; letter-spacing: 0; }
+  p { text-align: justify; margin: 6px 0; orphans: 3; widows: 3; }
+  ul, ol { margin: 6px 0 8px 22px; padding: 0; }
+  li { margin: 3px 0; }
+  table { width: 100%; border-collapse: collapse; margin: 9px 0 15px; font-size: 8.2pt; break-inside: avoid; page-break-inside: avoid; }
+  th, td { border: 0.55pt solid #6b7280; padding: 4px 5px; vertical-align: top; }
+  th { background: #eef1f4; text-align: left; font-weight: 700; }
+  img { display: block; max-width: 100%; height: auto; margin: 9px auto 5px; break-inside: avoid; page-break-inside: avoid; }
+  p:has(> img) { break-inside: avoid; page-break-inside: avoid; }
+  strong { font-weight: 700; }
+  code { font-family: Consolas, "Courier New", monospace; background: #f3f4f6; padding: 0 2px; overflow-wrap: anywhere; }
+  pre { white-space: pre-wrap; background: #f3f4f6; padding: 7px; font-size: 8.5pt; }
+  blockquote { margin: 8px 0 8px 18px; padding-left: 10px; border-left: 2px solid #9ca3af; color: #374151; }
+  h2, h3 { break-after: avoid; page-break-after: avoid; }
+
+            body { color: #171717; line-height: 1.55; }
+            table { font-size: 7.25pt; break-inside: auto; page-break-inside: auto; }
+            tr { break-inside: avoid; page-break-inside: avoid; }
+            th { background: #edf2f6; }
+            img { width: 100%; max-height: 238mm; object-fit: contain; }
+            p:has(> img) { margin-top: 12px; }
+            p > strong:first-child { color: #273746; }
+            h2 { color: #17365d; border-bottom-color: #7893aa; }
+            h3 { color: #274c68; }
+            a { color: #1f4e79; text-decoration: none; }
+            table { font-size: 6.7pt; } td { overflow-wrap: anywhere; }</style>
+</head>
+<body><h1>Scientific integrity, provenance and reproducibility audit</h1>
+<h2>1. Purpose</h2>
+<p>This document separates verified evidence from interpretation. It was generated from the same machine-readable outputs used by the manuscript and report. It is not a response letter and does not upgrade a conceptual network into observed infrastructure.</p>
+<h2>2. Provenance chain</h2>
+<ol>
+<li>Public source data: LarNO rainfall, terrain and MIKE water-depth arrays.</li>
+<li>Copied executable workflow: the calibrated local Itzï project was copied from <code>E:/Projects/20260518-itzi-flood</code> into <code>external_models/20260518-itzi-flood</code>; the source folder was not edited.</li>
+<li>New physical products: A, B and C arrays generated locally for eight events.</li>
+<li>New learning products: DrainLite models, predictions and metrics generated locally from C-B.</li>
+<li>External comparator: MIKE arrays are never a DrainLite target.</li>
+<li>Independent reproduction: the LarNO checkpoint metrics are calculated from a local inference array, not transcribed from Cao et al. (2026).</li>
+</ol>
+<h2>3. Software and fixed definitions</h2>
+<ul>
+<li>Itzï 25.4; PySWMM 2.1.0; swmm-toolkit 0.17.0.</li>
+<li>scikit-learn 1.8.0; NumPy 2.4.5; SciPy 1.17.1; Matplotlib 3.10.9; SciencePlots 2.2.2.</li>
+<li>A: surface-only, Manning n = 0.015.</li>
+<li>B: surface-only, n = 0.012 in coupled-inlet 3 x 3 neighbourhoods.</li>
+<li>C: B plus native bidirectional Itzï-SWMM coupling.</li>
+<li>Roughness effect: B-A.</li>
+<li>Learning target: C-B in millimetres.</li>
+<li>MIKE role: external descriptive comparator only.</li>
+</ul>
+<h2>4. Dataset checks</h2>
+<p>The accepted dataset contains exactly eight events. Every rainfall and depth array has shape 72 x 400 x 560 and contains finite values. The static active mask contains 105,527 cells. Evaluation therefore covers 7,597,944 active cell-times per held event and 60,783,552 over the complete outer validation. The dataset audit lists no rejected event.</p>
+<h2>5. Network checks</h2>
+<p>The accepted network contains 2276 junctions, 2276 conduits and 221 receiving interfaces. Directed outfall reachability is 100.0%. Independent parsing found zero isolated junctions, cycles, duplicate undirected endpoint groups, reverse-slope conduits and crown-above-rim endpoints. SWMM ponding is disabled; surface overflow and return are handled by the 2D coupling.</p>
+<h2>6. Numerical checks</h2>
+<p>All eight events have zero SWMM flooding loss, zero warning count and zero error count. Mean routing continuity error is -0.0912% and mean non-converging-step frequency is 0.0113%. The maximum absolute combined mass error is 0.1107% of rainfall volume.</p>
+<p>The previously observed outfall attribution count was traced to the copied reporting implementation, which repeated a global failed-step count for each outfall. Formal acceptance uses SWMM's global report value and separately captured junction counters; the repeated per-outfall field is not used in any conclusion.</p>
+<h2>7. Learning leakage checks</h2>
+<ul>
+<li>Outer test units are complete events.</li>
+<li>Inner validation is a complete event within the outer-training set.</li>
+<li>Test-event targets never enter fitting, iteration selection, sample weighting or prior construction.</li>
+<li>For final refitting, each training event receives a prior averaged from the other six outer-training events.</li>
+<li>The held event receives the prior averaged from all seven outer-training events.</li>
+<li>Explicit row/column coordinates and distance-to-synthetic-outfall are excluded.</li>
+<li>Static network fields are predictors only; dynamic SWMM target-side states are excluded.</li>
+</ul>
+<h2>8. Quantitative claim audit</h2>
+<p>The matched surface baseline MAE to C is 9.265926 mm. The spatiotemporal prior is 3.225513 mm, prior plus dynamics is 2.183922 mm and the complete hybrid is 2.129864 mm. Static descriptors improve all eight event folds; the macro-average paired increment is 0.054058 mm with an event-bootstrap interval of 0.025694-0.082733 mm.</p>
+<p>This evidence supports a small incremental association for the fixed network. It does not support cross-network generalisation, recovery of municipal sewer parameters, causal feature attribution, or direct application to the public LarNO checkpoint.</p>
+<h2>9. Rejected or superseded analyses</h2>
+<ul>
+<li>Static depression filling is not used as a formal Itzï result.</li>
+<li>The early sparse 82-node/29-pipe network is superseded and excluded.</li>
+<li>Disconnected and high-nonconvergence SWMM runs are retained only as diagnostics.</li>
+<li>Sink-only labels are not used for the bidirectional model because they remove positive residuals by construction.</li>
+<li>The 5 m proxy is not described as 5 m MIKE validation; genuine local 5 m reference files remain unavailable.</li>
+<li>Previous claims based on cropped 200 x 280 windows are superseded by full 400 x 560 V3 calculations.</li>
+<li>No residual is added directly to the public LarNO checkpoint because its MIKE target may already include drainage.</li>
+</ul>
+<h2>10. File evidence</h2>
+<table>
+<thead>
+<tr>
+<th>Evidence</th>
+<th>Repository-relative path</th>
+<th>Bytes</th>
+<th>SHA-256</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Accepted SWMM network</td>
+<td>extended_study\output\reviewer_major_revision_v3\network\swmm_bidirectional_normal_step05.inp</td>
+<td>510702</td>
+<td>965978312ffa3959c21826943aa5526b90e0834b08f7698dc6455aba5f990be2</td>
+</tr>
+<tr>
+<td>Physical quality table</td>
+<td>extended_study\output\reviewer_major_revision_v3\formal_matched_full\physics_quality.csv</td>
+<td>12539</td>
+<td>abd4736235f314b1117d04a066126e43087f0b4cbf2a7f525017183c775c40c1</td>
+</tr>
+<tr>
+<td>Dataset audit</td>
+<td>LarNO-main\benchmark\urbanflood\flood\region1_20m_drainage_v3_full\dataset_audit.json</td>
+<td>464</td>
+<td>30b08a0f252daedcb05bb4ea8d6c333f798d06d9c470233570c9028eddabaa16</td>
+</tr>
+<tr>
+<td>Original DrainLite summary</td>
+<td>extended_study\output\reviewer_major_revision_v3\drainlite_v3\metrics\summary_coupled.csv</td>
+<td>1953</td>
+<td>e5773bedc62bc8bb290fbd0903592f93c44dbe2a68b03dbec6f269f2d1bb64f9</td>
+</tr>
+<tr>
+<td>Hybrid metadata</td>
+<td>extended_study\output\reviewer_major_revision_v3\drainlite_hybrid_v3\experiment_metadata.json</td>
+<td>1714</td>
+<td>af0b5d1b2e11ce94af884b4a8c4a1be4e42ca095906dc5ef751753cb9e8b8c79</td>
+</tr>
+<tr>
+<td>Hybrid summary</td>
+<td>extended_study\output\reviewer_major_revision_v3\drainlite_hybrid_v3\metrics\summary_coupled.csv</td>
+<td>702</td>
+<td>bcc6ebd647f2bf6b3c21a7e7087856dcbd2c979b37b41d30cfcd75e81d9fb097</td>
+</tr>
+<tr>
+<td>LarNO event68 prediction</td>
+<td>LarNO-main\exp\20260220_183648_006352\pred_results\region1_20m\epoch_992\predictions_epoch_992_sample_event68.npy</td>
+<td>64512128</td>
+<td>b33c9b84facd93e0da1847f8139fab554be2f937b339b22334832a899e650fef</td>
+</tr>
+</tbody>
+</table>
+<h2>11. Figure audit</h2>
+<p>All eleven publication figures were generated from V3 CSV, JSON or NPY outputs using SciencePlots and Times New Roman. PNG files were visually reviewed at original resolution. One figure defect was found and corrected: model size in MB and process memory in GB had initially shared one numerical axis; the final Figure 11 uses separate panels and units. The workflow arrows were also repositioned after they were found to cross box labels. Map arrays use <code>origin=upper</code>, matching the audited network/DEM orientation. Percentile clipping is stated in captions and affects display only.</p>
+<h2>12. Reproduction order</h2>
+<ol>
+<li><code>build_gravity_consistent_swmm_network.py</code></li>
+<li><code>audit_reviewer_v3_network.py</code></li>
+<li><code>run_reviewer_v3_matched_coupling.py</code> or <code>run_reviewer_v3_batch.py</code></li>
+<li><code>merge_reviewer_v3_scenarios.py</code></li>
+<li><code>analyze_reviewer_v3_physics.py</code></li>
+<li><code>build_reviewer_v3_dataset.py</code></li>
+<li><code>run_reviewer_v3_drainlite.py</code></li>
+<li><code>run_reviewer_v3_drainlite_hybrid.py</code></li>
+<li><code>generate_reviewer_v3_publication_figures.py</code></li>
+<li><code>generate_reviewer_v3_documents.py</code></li>
+<li><code>render_reviewer_v3_documents.py</code></li>
+</ol>
+<h2>13. Remaining information before journal submission</h2>
+<p>Author list, affiliations, funding, contribution statements and data-distribution permissions are to be supplied. External observational validation, measured sewer geometry and a factorial multi-network dataset are not available. These absences are limitations, not values to be inferred or filled synthetically.</p></body>
+</html>

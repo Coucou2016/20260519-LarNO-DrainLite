@@ -1,0 +1,8 @@
+
+  EPA STORM WATER MANAGEMENT MODEL - VERSION 5.2 (Build 5.2.4)
+  PYSWMM TOOLKIT API - VERSION v1.0 (2026-02-26)
+  ------------------------------------------------------------
+
+  
+  ERROR 209: undefined object * at line 1017 of [SUBCATCHMENT] section:
+    SC_01          RainGage   J0001           10.0000    50.00     0.50   0.5000 0        *

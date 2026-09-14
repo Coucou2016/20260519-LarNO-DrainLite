@@ -1,0 +1,58 @@
+# ── Claude Code workspace & internal planning docs (not for repo) ────────────
+.claude/
+CLAUDE.md
+
+# ── HuggingFace upload scripts (internal tooling, not for repo) ──────────────
+huggingface/
+
+# ── Large data & outputs (download separately) ──────────────────────────────
+benchmark/
+exp/
+
+# Top-level zips left over from download
+*.zip
+
+# ── Python artifacts ─────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+.eggs/
+dist/
+build/
+*.whl
+
+# ── Jupyter ──────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+
+# ── Generated files (training / evaluation outputs) ──────────────────────────
+*.npy
+*.pt
+*.pth
+*.gif
+# Exception: keep the README demo GIF in the repo
+!code/urbanflood_larfno/assets/*.gif
+*.xlsx
+*.log
+train_log.txt
+
+# ── OS ───────────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── IDE ──────────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ── TODO ──────────────────────────────────────────────────────────────────────
+TODO.md
+
+
+# ── DEV ──────────────────────────────────────────────────────────────────────
+PROJECT_MAP.md
