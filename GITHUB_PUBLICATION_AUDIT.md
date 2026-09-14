@@ -3,7 +3,8 @@
 ## Publication record
 
 - Repository: `Coucou2016/20260519-LarNO-DrainLite`
-- Visibility at publication: private
+- Initial visibility at publication: private
+- Current visibility: public (changed at the repository owner's request on 2026-09-14)
 - Default branch: `main`
 - Initial audited commit: `cb2a913560ca668d65e14930dbf0577ce24c9c7f`
 - Commit message: `Publish auditable LarNO-DrainLite research snapshot`
@@ -51,11 +52,12 @@ commit exists; the successful pre-push LFS batch confirmed all 130 unique
 objects, while the independent pull confirms that a new clone can retrieve an
 object from that batch.
 
-## Access note
+## Access and licensing note
 
-The repository is private because it contains MIKE-derived reference arrays,
-an upstream checkpoint, and road-derived geometry whose redistribution terms
-must be reviewed before public release. Other Agents must authenticate to the
-`Coucou2016` account or be granted repository access. Changing visibility to
-public should be treated as a separate licensing and data-permission decision.
-
+The repository is publicly readable and can be cloned without authentication.
+It contains MIKE-derived reference arrays, an upstream checkpoint, and
+road-derived geometry. Public visibility does not replace or expand the reuse
+rights of those source materials. Their provenance and known redistribution
+boundaries remain documented in `DATA_MANIFEST.md` and
+`THIRD_PARTY_NOTICES.md`; downstream users remain responsible for complying
+with the applicable source licences and permissions.

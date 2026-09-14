@@ -6,6 +6,8 @@ evidence.
 
 ## v3.0 - 2026-09-14
 
+- Changed `Coucou2016/20260519-LarNO-DrainLite` to public visibility at the
+  repository owner's request and updated the publication audit accordingly.
 - Prepared the complete GitHub research snapshot for independent Agent review.
 - Added repository-level provenance, reproduction, data-manifest, third-party,
   environment, and integrity-verification documents.
@@ -58,4 +60,3 @@ evidence.
   network from the accepted road alignment.
 - Produced preliminary MIKE comparisons, reports, and DrainLite prototypes.
 - These outputs informed v2 but are not used as final quantitative evidence.
-
