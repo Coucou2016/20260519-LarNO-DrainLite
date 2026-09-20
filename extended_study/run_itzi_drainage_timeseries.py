@@ -17,7 +17,6 @@ from pathlib import Path
 
 import numpy as np
 
-sys.path.insert(0, r"E:\Miniconda3\Lib\site-packages")
 import itzi.rasterdomain as rasterdomain
 import itzi.surfaceflow as surfaceflow
 from itzi.hydrology import Hydrology

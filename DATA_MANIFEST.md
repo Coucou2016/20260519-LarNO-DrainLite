@@ -59,11 +59,11 @@ as a 43 GB scientific dataset.
 ## Integrity
 
 - Submission artifacts are hashed in
-  `extended_study/output/reviewer_major_revision_v3/submission_package_v3/sha256_manifest.csv`.
+  `extended_study/output/reviewer_major_revision_v4/submission_package_v4/sha256_manifest.csv`.
 - Repository-level canonical artifacts are hashed by
   `scripts/generate_data_manifest.py` into `canonical_data_sha256.csv`.
-- Numerical and structural consistency is checked by
-  `extended_study/final_reviewer_v3_acceptance.py`.
+- Numerical and structural consistency is checked read-only by
+  `extended_study/final_reviewer_v4_acceptance.py` and the repository verifier.
 
 ## Known scientific limits
 
@@ -74,4 +74,5 @@ as a 43 GB scientific dataset.
 - The public LarNO checkpoint may already encode MIKE drainage effects.
 - No valid claim of clean LarNO-plus-drainage stacking can be made until a
   surface-only LarNO baseline is trained or obtained.
-
+- Current event-holdout results apply to one fixed conceptual network; they do
+  not demonstrate prediction for unseen pipe layouts or capacities.

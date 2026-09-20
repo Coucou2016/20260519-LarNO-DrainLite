@@ -2,8 +2,9 @@
 """Analyze the Shenzhen Futian DEM to understand terrain and identify road networks."""
 import numpy as np
 import os, sys
+from pathlib import Path
 
-DEM_PATH = r"e:\Projects\20260519-LarNO\LarNO-main\benchmark\urbanflood\geodata\region1_20m\dem.npy"
+DEM_PATH = Path(__file__).resolve().parents[1] / "LarNO-main" / "benchmark" / "urbanflood" / "geodata" / "region1_20m" / "dem.npy"
 
 def main():
     dem = np.load(DEM_PATH, allow_pickle=True)

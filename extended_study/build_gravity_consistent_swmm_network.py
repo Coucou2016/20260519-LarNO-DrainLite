@@ -446,7 +446,6 @@ def write_inp(
 
 
 def validate(output: Path) -> str:
-    sys.path.insert(0, r"E:\Miniconda3\Lib\site-packages")
     import pyswmm
 
     simulation = pyswmm.Simulation(str(output))

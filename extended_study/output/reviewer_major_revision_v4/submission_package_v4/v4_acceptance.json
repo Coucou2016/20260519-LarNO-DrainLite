@@ -1,0 +1,1183 @@
+{
+  "status": "PASS",
+  "passed": 235,
+  "total": 235,
+  "failed": [],
+  "checks": [
+    {
+      "name": "metric file: event_metrics_all_seeds.csv",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\final_hybrid_controls\\metrics\\event_metrics_all_seeds.csv"
+    },
+    {
+      "name": "metric file: seed_macro_metrics.csv",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\final_hybrid_controls\\metrics\\seed_macro_metrics.csv"
+    },
+    {
+      "name": "metric file: model_summary_mean_sd.csv",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\final_hybrid_controls\\metrics\\model_summary_mean_sd.csv"
+    },
+    {
+      "name": "metric file: runtime_end_to_end.csv",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\final_hybrid_controls\\metrics\\runtime_end_to_end.csv"
+    },
+    {
+      "name": "metric file: runtime_uncached_canonical.csv",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\final_hybrid_controls\\metrics\\runtime_uncached_canonical.csv"
+    },
+    {
+      "name": "metric file: training_runtime.csv",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\final_hybrid_controls\\metrics\\training_runtime.csv"
+    },
+    {
+      "name": "metric file: conditional_metrics_canonical_seed.csv",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\final_hybrid_controls\\metrics\\conditional_metrics_canonical_seed.csv"
+    },
+    {
+      "name": "metric file: final_hybrid_network_controls.csv",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\final_hybrid_controls\\metrics\\final_hybrid_network_controls.csv"
+    },
+    {
+      "name": "metric file: clipping_sensitivity.csv",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\final_hybrid_controls\\metrics\\clipping_sensitivity.csv"
+    },
+    {
+      "name": "metric file: event_selection_inventory.csv",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\final_hybrid_controls\\metrics\\event_selection_inventory.csv"
+    },
+    {
+      "name": "uncached runtime: eight events",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "event1: neighbourhood included in timing",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "event1: benchmark preserves prediction",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "event20: neighbourhood included in timing",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "event20: benchmark preserves prediction",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "event65: neighbourhood included in timing",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "event65: benchmark preserves prediction",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "event66: neighbourhood included in timing",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "event66: benchmark preserves prediction",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "event67: neighbourhood included in timing",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "event67: benchmark preserves prediction",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "event68: neighbourhood included in timing",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "event68: benchmark preserves prediction",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "event69: neighbourhood included in timing",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "event69: benchmark preserves prediction",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "event70: neighbourhood included in timing",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "event70: benchmark preserves prediction",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "paired physical sensitivity: baseline and five alternatives",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "sensitivity baseline: finite complete arrays",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "sensitivity baseline: routing continuity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "sensitivity loss_0mmh: finite complete arrays",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "sensitivity loss_0mmh: routing continuity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "sensitivity loss_2mmh: finite complete arrays",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "sensitivity loss_2mmh: routing continuity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "sensitivity building_nearest: finite complete arrays",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "sensitivity building_nearest: routing continuity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "sensitivity building_exclude: finite complete arrays",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "sensitivity building_exclude: routing continuity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "sensitivity inlet_manning_0p015: finite complete arrays",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "sensitivity inlet_manning_0p015: routing continuity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "metadata events",
+      "passed": true,
+      "detail": "['event1', 'event20', 'event65', 'event66', 'event67', 'event68', 'event69', 'event70']"
+    },
+    {
+      "name": "metadata seeds",
+      "passed": true,
+      "detail": "[1907, 2718, 3141, 5772, 8119]"
+    },
+    {
+      "name": "primary residual unclipped",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "MIKE excluded from fitting",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "whole-event outer validation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "fixed pre-specified complexity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mask-aware neighbourhood",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "hybrid_dynamic seed 1907: eight held events",
+      "passed": true,
+      "detail": "8"
+    },
+    {
+      "name": "hybrid_all seed 1907: eight held events",
+      "passed": true,
+      "detail": "8"
+    },
+    {
+      "name": "hybrid_dynamic seed 2718: eight held events",
+      "passed": true,
+      "detail": "8"
+    },
+    {
+      "name": "hybrid_all seed 2718: eight held events",
+      "passed": true,
+      "detail": "8"
+    },
+    {
+      "name": "hybrid_dynamic seed 3141: eight held events",
+      "passed": true,
+      "detail": "8"
+    },
+    {
+      "name": "hybrid_all seed 3141: eight held events",
+      "passed": true,
+      "detail": "8"
+    },
+    {
+      "name": "hybrid_dynamic seed 5772: eight held events",
+      "passed": true,
+      "detail": "8"
+    },
+    {
+      "name": "hybrid_all seed 5772: eight held events",
+      "passed": true,
+      "detail": "8"
+    },
+    {
+      "name": "hybrid_dynamic seed 8119: eight held events",
+      "passed": true,
+      "detail": "8"
+    },
+    {
+      "name": "hybrid_all seed 8119: eight held events",
+      "passed": true,
+      "detail": "8"
+    },
+    {
+      "name": "canonical surface_matched: eight held events",
+      "passed": true,
+      "detail": "8"
+    },
+    {
+      "name": "canonical prior_only: eight held events",
+      "passed": true,
+      "detail": "8"
+    },
+    {
+      "name": "canonical dynamic_no_prior: eight held events",
+      "passed": true,
+      "detail": "8"
+    },
+    {
+      "name": "canonical hybrid_mask: eight held events",
+      "passed": true,
+      "detail": "8"
+    },
+    {
+      "name": "canonical hybrid_hydraulic: eight held events",
+      "passed": true,
+      "detail": "8"
+    },
+    {
+      "name": "active grid count",
+      "passed": true,
+      "detail": "105527"
+    },
+    {
+      "name": "event1: canonical prediction exists",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\final_hybrid_controls\\predictions\\event1\\h_hybrid_all.npy"
+    },
+    {
+      "name": "event1: prediction shape",
+      "passed": true,
+      "detail": "(72, 400, 560)"
+    },
+    {
+      "name": "event1: finite prediction",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "event1: non-negative depth",
+      "passed": true,
+      "detail": "0.0"
+    },
+    {
+      "name": "event1: prediction/CSV MAE",
+      "passed": true,
+      "detail": "2.24579096 vs 2.24579096"
+    },
+    {
+      "name": "event20: canonical prediction exists",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\final_hybrid_controls\\predictions\\event20\\h_hybrid_all.npy"
+    },
+    {
+      "name": "event20: prediction shape",
+      "passed": true,
+      "detail": "(72, 400, 560)"
+    },
+    {
+      "name": "event20: finite prediction",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "event20: non-negative depth",
+      "passed": true,
+      "detail": "0.0"
+    },
+    {
+      "name": "event20: prediction/CSV MAE",
+      "passed": true,
+      "detail": "2.12077808 vs 2.12077808"
+    },
+    {
+      "name": "event65: canonical prediction exists",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\final_hybrid_controls\\predictions\\event65\\h_hybrid_all.npy"
+    },
+    {
+      "name": "event65: prediction shape",
+      "passed": true,
+      "detail": "(72, 400, 560)"
+    },
+    {
+      "name": "event65: finite prediction",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "event65: non-negative depth",
+      "passed": true,
+      "detail": "0.0"
+    },
+    {
+      "name": "event65: prediction/CSV MAE",
+      "passed": true,
+      "detail": "2.21795201 vs 2.21795201"
+    },
+    {
+      "name": "event66: canonical prediction exists",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\final_hybrid_controls\\predictions\\event66\\h_hybrid_all.npy"
+    },
+    {
+      "name": "event66: prediction shape",
+      "passed": true,
+      "detail": "(72, 400, 560)"
+    },
+    {
+      "name": "event66: finite prediction",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "event66: non-negative depth",
+      "passed": true,
+      "detail": "0.0"
+    },
+    {
+      "name": "event66: prediction/CSV MAE",
+      "passed": true,
+      "detail": "2.29265404 vs 2.29265404"
+    },
+    {
+      "name": "event67: canonical prediction exists",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\final_hybrid_controls\\predictions\\event67\\h_hybrid_all.npy"
+    },
+    {
+      "name": "event67: prediction shape",
+      "passed": true,
+      "detail": "(72, 400, 560)"
+    },
+    {
+      "name": "event67: finite prediction",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "event67: non-negative depth",
+      "passed": true,
+      "detail": "0.0"
+    },
+    {
+      "name": "event67: prediction/CSV MAE",
+      "passed": true,
+      "detail": "2.55948353 vs 2.55948353"
+    },
+    {
+      "name": "event68: canonical prediction exists",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\final_hybrid_controls\\predictions\\event68\\h_hybrid_all.npy"
+    },
+    {
+      "name": "event68: prediction shape",
+      "passed": true,
+      "detail": "(72, 400, 560)"
+    },
+    {
+      "name": "event68: finite prediction",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "event68: non-negative depth",
+      "passed": true,
+      "detail": "0.0"
+    },
+    {
+      "name": "event68: prediction/CSV MAE",
+      "passed": true,
+      "detail": "2.04764533 vs 2.04764533"
+    },
+    {
+      "name": "event69: canonical prediction exists",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\final_hybrid_controls\\predictions\\event69\\h_hybrid_all.npy"
+    },
+    {
+      "name": "event69: prediction shape",
+      "passed": true,
+      "detail": "(72, 400, 560)"
+    },
+    {
+      "name": "event69: finite prediction",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "event69: non-negative depth",
+      "passed": true,
+      "detail": "0.0"
+    },
+    {
+      "name": "event69: prediction/CSV MAE",
+      "passed": true,
+      "detail": "1.93617392 vs 1.93617392"
+    },
+    {
+      "name": "event70: canonical prediction exists",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\final_hybrid_controls\\predictions\\event70\\h_hybrid_all.npy"
+    },
+    {
+      "name": "event70: prediction shape",
+      "passed": true,
+      "detail": "(72, 400, 560)"
+    },
+    {
+      "name": "event70: finite prediction",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "event70: non-negative depth",
+      "passed": true,
+      "detail": "0.0"
+    },
+    {
+      "name": "event70: prediction/CSV MAE",
+      "passed": true,
+      "detail": "2.01269150 vs 2.01269150"
+    },
+    {
+      "name": "final-hybrid control count",
+      "passed": true,
+      "detail": "256"
+    },
+    {
+      "name": "event1: all displacement controls",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "event1: block controls",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "event1: permutation controls",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "event1: zero-field control",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "event20: all displacement controls",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "event20: block controls",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "event20: permutation controls",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "event20: zero-field control",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "event65: all displacement controls",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "event65: block controls",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "event65: permutation controls",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "event65: zero-field control",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "event66: all displacement controls",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "event66: block controls",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "event66: permutation controls",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "event66: zero-field control",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "event67: all displacement controls",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "event67: block controls",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "event67: permutation controls",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "event67: zero-field control",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "event68: all displacement controls",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "event68: block controls",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "event68: permutation controls",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "event68: zero-field control",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "event69: all displacement controls",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "event69: block controls",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "event69: permutation controls",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "event69: zero-field control",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "event70: all displacement controls",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "event70: block controls",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "event70: permutation controls",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "event70: zero-field control",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "conditional metric: all_active",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "conditional metric: target_wet_0p03m",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "conditional metric: effect_abs_over_5mm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "conditional metric: net_drainage_over_5mm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "conditional metric: positive_residual_over_5mm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "conditional metric: near_inlet_0_20m",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "conditional metric: near_pipe_100_infm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "conditional rows canonical only",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "runtime contains all components",
+      "passed": true,
+      "detail": "23.5562 >= 23.5143"
+    },
+    {
+      "name": "surface plus correction arithmetic",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "runtime contains all components",
+      "passed": true,
+      "detail": "23.9052 >= 23.8622"
+    },
+    {
+      "name": "surface plus correction arithmetic",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "runtime contains all components",
+      "passed": true,
+      "detail": "23.6147 >= 23.5726"
+    },
+    {
+      "name": "surface plus correction arithmetic",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "runtime contains all components",
+      "passed": true,
+      "detail": "23.3674 >= 23.3229"
+    },
+    {
+      "name": "surface plus correction arithmetic",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "runtime contains all components",
+      "passed": true,
+      "detail": "23.4068 >= 23.3650"
+    },
+    {
+      "name": "surface plus correction arithmetic",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "runtime contains all components",
+      "passed": true,
+      "detail": "23.7654 >= 23.7236"
+    },
+    {
+      "name": "surface plus correction arithmetic",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "runtime contains all components",
+      "passed": true,
+      "detail": "23.3748 >= 23.3330"
+    },
+    {
+      "name": "surface plus correction arithmetic",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "runtime contains all components",
+      "passed": true,
+      "detail": "24.1005 >= 24.0573"
+    },
+    {
+      "name": "surface plus correction arithmetic",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "unclipped diagnostic present per event",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "500 mm clipping sensitivity per event",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "1200 mm clipping sensitivity per event",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "event inventory includes paired events",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "event79 recorded unreadable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "figure artifact: fig01_workflow.png",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\submission_package_v4\\figures\\fig01_workflow.png"
+    },
+    {
+      "name": "figure artifact: fig01_workflow.pdf",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\submission_package_v4\\figures\\fig01_workflow.pdf"
+    },
+    {
+      "name": "figure artifact: fig01_workflow.svg",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\submission_package_v4\\figures\\fig01_workflow.svg"
+    },
+    {
+      "name": "figure resolution: fig01_workflow",
+      "passed": true,
+      "detail": "(2838, 1658)"
+    },
+    {
+      "name": "figure artifact: fig02_network_audit.png",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\submission_package_v4\\figures\\fig02_network_audit.png"
+    },
+    {
+      "name": "figure artifact: fig02_network_audit.pdf",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\submission_package_v4\\figures\\fig02_network_audit.pdf"
+    },
+    {
+      "name": "figure artifact: fig02_network_audit.svg",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\submission_package_v4\\figures\\fig02_network_audit.svg"
+    },
+    {
+      "name": "figure resolution: fig02_network_audit",
+      "passed": true,
+      "detail": "(2988, 2459)"
+    },
+    {
+      "name": "figure artifact: fig03_physical_quality.png",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\submission_package_v4\\figures\\fig03_physical_quality.png"
+    },
+    {
+      "name": "figure artifact: fig03_physical_quality.pdf",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\submission_package_v4\\figures\\fig03_physical_quality.pdf"
+    },
+    {
+      "name": "figure artifact: fig03_physical_quality.svg",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\submission_package_v4\\figures\\fig03_physical_quality.svg"
+    },
+    {
+      "name": "figure resolution: fig03_physical_quality",
+      "passed": true,
+      "detail": "(2838, 2158)"
+    },
+    {
+      "name": "figure artifact: fig04_eight_event_hydrographs.png",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\submission_package_v4\\figures\\fig04_eight_event_hydrographs.png"
+    },
+    {
+      "name": "figure artifact: fig04_eight_event_hydrographs.pdf",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\submission_package_v4\\figures\\fig04_eight_event_hydrographs.pdf"
+    },
+    {
+      "name": "figure artifact: fig04_eight_event_hydrographs.svg",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\submission_package_v4\\figures\\fig04_eight_event_hydrographs.svg"
+    },
+    {
+      "name": "figure resolution: fig04_eight_event_hydrographs",
+      "passed": true,
+      "detail": "(2838, 3358)"
+    },
+    {
+      "name": "figure artifact: fig05_event68_physical_maps.png",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\submission_package_v4\\figures\\fig05_event68_physical_maps.png"
+    },
+    {
+      "name": "figure artifact: fig05_event68_physical_maps.pdf",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\submission_package_v4\\figures\\fig05_event68_physical_maps.pdf"
+    },
+    {
+      "name": "figure artifact: fig05_event68_physical_maps.svg",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\submission_package_v4\\figures\\fig05_event68_physical_maps.svg"
+    },
+    {
+      "name": "figure resolution: fig05_event68_physical_maps",
+      "passed": true,
+      "detail": "(2248, 1472)"
+    },
+    {
+      "name": "figure artifact: fig06_fixed_network_residual_maps.png",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\submission_package_v4\\figures\\fig06_fixed_network_residual_maps.png"
+    },
+    {
+      "name": "figure artifact: fig06_fixed_network_residual_maps.pdf",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\submission_package_v4\\figures\\fig06_fixed_network_residual_maps.pdf"
+    },
+    {
+      "name": "figure artifact: fig06_fixed_network_residual_maps.svg",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\submission_package_v4\\figures\\fig06_fixed_network_residual_maps.svg"
+    },
+    {
+      "name": "figure resolution: fig06_fixed_network_residual_maps",
+      "passed": true,
+      "detail": "(2838, 3080)"
+    },
+    {
+      "name": "figure artifact: fig07_skill_and_sampling_seeds.png",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\submission_package_v4\\figures\\fig07_skill_and_sampling_seeds.png"
+    },
+    {
+      "name": "figure artifact: fig07_skill_and_sampling_seeds.pdf",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\submission_package_v4\\figures\\fig07_skill_and_sampling_seeds.pdf"
+    },
+    {
+      "name": "figure artifact: fig07_skill_and_sampling_seeds.svg",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\submission_package_v4\\figures\\fig07_skill_and_sampling_seeds.svg"
+    },
+    {
+      "name": "figure resolution: fig07_skill_and_sampling_seeds",
+      "passed": true,
+      "detail": "(2836, 1298)"
+    },
+    {
+      "name": "figure artifact: fig08_final_hybrid_network_controls.png",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\submission_package_v4\\figures\\fig08_final_hybrid_network_controls.png"
+    },
+    {
+      "name": "figure artifact: fig08_final_hybrid_network_controls.pdf",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\submission_package_v4\\figures\\fig08_final_hybrid_network_controls.pdf"
+    },
+    {
+      "name": "figure artifact: fig08_final_hybrid_network_controls.svg",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\submission_package_v4\\figures\\fig08_final_hybrid_network_controls.svg"
+    },
+    {
+      "name": "figure resolution: fig08_final_hybrid_network_controls",
+      "passed": true,
+      "detail": "(2838, 2098)"
+    },
+    {
+      "name": "figure artifact: fig09_conditioned_performance.png",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\submission_package_v4\\figures\\fig09_conditioned_performance.png"
+    },
+    {
+      "name": "figure artifact: fig09_conditioned_performance.pdf",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\submission_package_v4\\figures\\fig09_conditioned_performance.pdf"
+    },
+    {
+      "name": "figure artifact: fig09_conditioned_performance.svg",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\submission_package_v4\\figures\\fig09_conditioned_performance.svg"
+    },
+    {
+      "name": "figure resolution: fig09_conditioned_performance",
+      "passed": true,
+      "detail": "(2836, 1298)"
+    },
+    {
+      "name": "figure artifact: fig10_mike_metric_tradeoff.png",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\submission_package_v4\\figures\\fig10_mike_metric_tradeoff.png"
+    },
+    {
+      "name": "figure artifact: fig10_mike_metric_tradeoff.pdf",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\submission_package_v4\\figures\\fig10_mike_metric_tradeoff.pdf"
+    },
+    {
+      "name": "figure artifact: fig10_mike_metric_tradeoff.svg",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\submission_package_v4\\figures\\fig10_mike_metric_tradeoff.svg"
+    },
+    {
+      "name": "figure resolution: fig10_mike_metric_tradeoff",
+      "passed": true,
+      "detail": "(2838, 2038)"
+    },
+    {
+      "name": "figure artifact: fig11_runtime_clipping_event_selection.png",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\submission_package_v4\\figures\\fig11_runtime_clipping_event_selection.png"
+    },
+    {
+      "name": "figure artifact: fig11_runtime_clipping_event_selection.pdf",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\submission_package_v4\\figures\\fig11_runtime_clipping_event_selection.pdf"
+    },
+    {
+      "name": "figure artifact: fig11_runtime_clipping_event_selection.svg",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\submission_package_v4\\figures\\fig11_runtime_clipping_event_selection.svg"
+    },
+    {
+      "name": "figure resolution: fig11_runtime_clipping_event_selection",
+      "passed": true,
+      "detail": "(2835, 2078)"
+    },
+    {
+      "name": "figure artifact: fig12_larno_reproduction.png",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\submission_package_v4\\figures\\fig12_larno_reproduction.png"
+    },
+    {
+      "name": "figure artifact: fig12_larno_reproduction.pdf",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\submission_package_v4\\figures\\fig12_larno_reproduction.pdf"
+    },
+    {
+      "name": "figure artifact: fig12_larno_reproduction.svg",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\submission_package_v4\\figures\\fig12_larno_reproduction.svg"
+    },
+    {
+      "name": "figure resolution: fig12_larno_reproduction",
+      "passed": true,
+      "detail": "(2834, 993)"
+    },
+    {
+      "name": "figure artifact: fig13_physical_sensitivity.png",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\submission_package_v4\\figures\\fig13_physical_sensitivity.png"
+    },
+    {
+      "name": "figure artifact: fig13_physical_sensitivity.pdf",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\submission_package_v4\\figures\\fig13_physical_sensitivity.pdf"
+    },
+    {
+      "name": "figure artifact: fig13_physical_sensitivity.svg",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\submission_package_v4\\figures\\fig13_physical_sensitivity.svg"
+    },
+    {
+      "name": "figure resolution: fig13_physical_sensitivity",
+      "passed": true,
+      "detail": "(2837, 2118)"
+    },
+    {
+      "name": "document artifact: manuscript.md",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\submission_package_v4\\manuscript.md"
+    },
+    {
+      "name": "document artifact: manuscript.html",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\submission_package_v4\\manuscript.html"
+    },
+    {
+      "name": "document artifact: manuscript.pdf",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\submission_package_v4\\manuscript.pdf"
+    },
+    {
+      "name": "manuscript: all images embedded",
+      "passed": true,
+      "detail": "13"
+    },
+    {
+      "name": "manuscript: no external stylesheet",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "manuscript: readable PDF",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "document artifact: report.md",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\submission_package_v4\\report.md"
+    },
+    {
+      "name": "document artifact: report.html",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\submission_package_v4\\report.html"
+    },
+    {
+      "name": "document artifact: report.pdf",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\submission_package_v4\\report.pdf"
+    },
+    {
+      "name": "report: all images embedded",
+      "passed": true,
+      "detail": "13"
+    },
+    {
+      "name": "report: no external stylesheet",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "report: readable PDF",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "document artifact: scientific_integrity_audit.md",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\submission_package_v4\\scientific_integrity_audit.md"
+    },
+    {
+      "name": "document artifact: scientific_integrity_audit.html",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\submission_package_v4\\scientific_integrity_audit.html"
+    },
+    {
+      "name": "document artifact: scientific_integrity_audit.pdf",
+      "passed": true,
+      "detail": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\submission_package_v4\\scientific_integrity_audit.pdf"
+    },
+    {
+      "name": "scientific_integrity_audit: all images embedded",
+      "passed": true,
+      "detail": "0"
+    },
+    {
+      "name": "scientific_integrity_audit: no external stylesheet",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "scientific_integrity_audit: readable PDF",
+      "passed": true,
+      "detail": ""
+    }
+  ]
+}

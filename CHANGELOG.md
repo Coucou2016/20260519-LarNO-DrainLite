@@ -4,6 +4,37 @@ This file records scientific revisions rather than every exploratory command.
 Superseded exploratory outputs remain local but are not treated as canonical
 evidence.
 
+## v4.0 - 2026-09-19
+
+- Repositioned DrainLite as a fixed-network drainage residual emulator rather
+  than an end-to-end rainfall-to-flood or unseen-network generalization model.
+- Replaced single-seed final evaluation with five-seed, eight-fold whole-event
+  validation using a fixed iteration count and leakage-controlled priors.
+- Added final-hybrid network shift, block-shuffle, group-permutation, mask-only,
+  hydraulic-only, and zero-network-field controls.
+- Added wet-cell, near-network, strong-effect, drainage, and surcharge
+  conditioned metrics, together with complete peak, volume, area, CSI, and
+  timing metrics.
+- Changed neighbourhood summaries to active-mask-aware filtering and removed
+  residual clipping from the primary prediction path; retained clipping only as
+  an explicit sensitivity analysis.
+- Split feature construction, estimator prediction, postprocessing, and total
+  correction runtime, and added the surface-plus-correction comparison against
+  the coupled simulation.
+- Separated evidence generation from read-only verification, expanded Git LFS
+  checks to all tracked objects, and added fresh SWMM-input topology auditing.
+- Added path-scoped licensing, citation metadata, an environment lock, portable
+  path handling, unit tests, and a lightweight continuous-integration workflow.
+- Completed 40 event/seed folds. Full-hybrid MAE is 2.169 +/- 0.008 mm;
+  the paired static-network increment is 0.048 +/- 0.002 mm.
+- Completed five paired event68 physical sensitivities. Building-rainfall
+  treatment materially changes drainage magnitude; inlet roughness has a much
+  smaller effect. These are sensitivity experiments, not field calibration.
+- Remeasured inference including uncached dynamic neighbourhood computation;
+  checked reconstructed arrays against saved predictions with no difference.
+- Rebuilt 13 figures and the manuscript, report and integrity audit, including
+  complete metric disclosure and six-decimal small-effect reporting.
+
 ## v3.0 - 2026-09-14
 
 - Changed `Coucou2016/20260519-LarNO-DrainLite` to public visibility at the

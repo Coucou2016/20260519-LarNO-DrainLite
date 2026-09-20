@@ -26,7 +26,7 @@ from scipy import ndimage
 # ============================================================
 # Paths
 # ============================================================
-ROOT = r"e:\Projects\20260519-LarNO\LarNO-main\benchmark\urbanflood"
+ROOT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "LarNO-main", "benchmark", "urbanflood")
 DEM_PATH = os.path.join(ROOT, "geodata", "region1_20m", "dem.npy")
 FLOOD_DIR = os.path.join(ROOT, "flood", "region1_20m")
 OUT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "output")

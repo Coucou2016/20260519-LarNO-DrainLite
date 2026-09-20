@@ -27,7 +27,7 @@ from pathlib import Path
 import numpy as np
 
 
-ROOT = Path(r"E:\Projects\20260519-LarNO")
+ROOT = Path(__file__).resolve().parents[1]
 CASE = ROOT / "external_models" / "20260518-itzi-flood" / "test_cases" / "shenzhen_region1"
 NET_DIR = CASE / "input_data" / "networks"
 NET_PATH = NET_DIR / "osm_merged_network.npz"
@@ -350,7 +350,6 @@ def connectivity(path: Path) -> dict:
 
 def pyswmm_validate(path: Path) -> dict:
     try:
-        sys.path.insert(0, r"E:\Miniconda3\Lib\site-packages")
         import pyswmm
 
         with pyswmm.Simulation(str(path)):

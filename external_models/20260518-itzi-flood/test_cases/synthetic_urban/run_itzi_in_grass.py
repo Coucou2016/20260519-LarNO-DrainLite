@@ -8,7 +8,6 @@ import time
 from datetime import timedelta
 
 # Add ITZI to path if needed
-sys.path.insert(0, r'E:\Miniconda3\Lib\site-packages')
 
 import itzi
 from itzi import SimulationRunner

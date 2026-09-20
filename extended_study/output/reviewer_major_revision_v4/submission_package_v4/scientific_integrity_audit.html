@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Scientific integrity and reproducibility audit</title>
+<style>
+  @page { size: A4; margin: 18mm 17mm 19mm; }
+  body { max-width: 178mm; margin: 0 auto; color: #111827; font-family: "Times New Roman", "SimSun", "Songti SC", serif; font-size: 10.5pt; line-height: 1.48; }
+  h1 { font-size: 20pt; line-height: 1.18; color: #111827; margin: 0 0 16px; text-align: center; letter-spacing: 0; }
+  h2 { font-size: 14.5pt; color: #111827; border-bottom: 0.7pt solid #9ca3af; padding-bottom: 4px; margin: 25px 0 9px; letter-spacing: 0; }
+  h3 { font-size: 11.5pt; color: #111827; margin: 18px 0 6px; letter-spacing: 0; }
+  p { text-align: justify; margin: 6px 0; orphans: 3; widows: 3; }
+  ul, ol { margin: 6px 0 8px 22px; padding: 0; }
+  li { margin: 3px 0; }
+  table { width: 100%; border-collapse: collapse; margin: 9px 0 15px; font-size: 8.2pt; break-inside: avoid; page-break-inside: avoid; }
+  th, td { border: 0.55pt solid #6b7280; padding: 4px 5px; vertical-align: top; }
+  th { background: #eef1f4; text-align: left; font-weight: 700; }
+  img { display: block; max-width: 100%; height: auto; margin: 9px auto 5px; break-inside: avoid; page-break-inside: avoid; }
+  p:has(> img) { break-inside: avoid; page-break-inside: avoid; }
+  strong { font-weight: 700; }
+  code { font-family: Consolas, "Courier New", monospace; background: #f3f4f6; padding: 0 2px; overflow-wrap: anywhere; }
+  pre { white-space: pre-wrap; background: #f3f4f6; padding: 7px; font-size: 8.5pt; }
+  blockquote { margin: 8px 0 8px 18px; padding-left: 10px; border-left: 2px solid #9ca3af; color: #374151; }
+  h2, h3 { break-after: avoid; page-break-after: avoid; }
+
+            body { color: #171717; line-height: 1.56; }
+            table { font-size: 7.15pt; break-inside: auto; page-break-inside: auto; }
+            tr { break-inside: avoid; page-break-inside: avoid; }
+            th { background: #edf2f6; }
+            img { width: 100%; max-height: 236mm; object-fit: contain; }
+            p:has(> img) { margin-top: 12px; }
+            p > strong:first-child { color: #273746; }
+            h2 { color: #17365d; border-bottom-color: #7893aa; }
+            h3 { color: #274c68; }
+            a { color: #1f4e79; text-decoration: none; }
+            code { overflow-wrap: anywhere; }
+            figure { margin: 12px 0; break-inside: avoid; page-break-inside: avoid; }
+            figure img { max-height: 208mm; }
+            figcaption { font-size: 9pt; line-height: 1.4; }
+            .short-table { break-inside: avoid; page-break-inside: avoid; }
+            table { font-size: 6.6pt; } td { overflow-wrap: anywhere; }</style>
+</head>
+<body><h1>Scientific integrity and reproducibility audit</h1>
+<h2>1. Audit purpose</h2>
+<p>This document identifies the evidence behind the manuscript and separates calculated results from interpretation. It is not a response letter. The audit can be checked independently using the read-only repository verifier.</p>
+<h2>2. Provenance boundary</h2>
+<ul>
+<li>Public LarNO rainfall, terrain, MIKE fields and checkpoint are upstream artifacts and are not presented as original calculations.</li>
+<li>The conceptual network, matched A/B/C Itzï-SWMM arrays, DrainLite estimators, predictions, controls, statistics and V4 figures were generated within this project.</li>
+<li>MIKE is never a DrainLite target, fitting input, sample weight or hyperparameter-selection variable.</li>
+<li>The public LarNO event68 output is reproduced separately and is not corrected by the principal model.</li>
+<li>OpenStreetMap-derived road geometry is attributed to © OpenStreetMap contributors and remains subject to source terms.</li>
+</ul>
+<h2>3. Scientific claims tied to evidence</h2>
+<p>The physical claim uses <code>physics_quality.csv</code> and the canonical V3 arrays. The learning claim uses complete V4 held-event predictions and <code>event_metrics_all_seeds.csv</code>. The static-network claim is limited to the measured increment between <code>hybrid_dynamic</code> and <code>hybrid_all</code> across five sampling seeds and to controls applied to the final hybrid. It is not described as unseen-network generalisation. Runtime starts before feature construction. The primary prediction does not clip residuals; non-negative reconstructed depth and optional clipping are reported separately.</p>
+<h2>4. Leakage controls</h2>
+<p>The outer unit is a complete rainfall event. The held event is absent from model fitting and its spatiotemporal prior. A fitting event is also removed from the prior attached to its own sampled rows. Explicit coordinates, synthetic outfall distance and target-side SWMM dynamics are excluded. Model complexity is fixed at 140 iterations before fitting. Unit tests exercise the masked neighbourhood, own-event prior exclusion and zero-network control.</p>
+<h2>5. Physical quality conditions</h2>
+<p>The declared thresholds are absolute routing continuity &lt;= 2%, non-converging routing steps &lt;= 2%, absolute combined mass error &lt;= 0.5% of rainfall, zero SWMM flooding loss, zero warnings/errors, finite 72 x 400 x 560 arrays and complete directed outfall reachability. All eight canonical events pass. These are project acceptance criteria, not field calibration.</p>
+<h2>6. Evidence hashes</h2>
+<p><strong>Table 1. Evidence files and content hashes.</strong></p>
+<table class="short-table">
+<thead>
+<tr>
+<th>Evidence file</th>
+<th>Bytes</th>
+<th>SHA-256</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>extended_study\output\reviewer_major_revision_v3\formal_matched_full\physics_quality.csv</td>
+<td>12539</td>
+<td>abd4736235f314b1117d04a066126e43087f0b4cbf2a7f525017183c775c40c1</td>
+</tr>
+<tr>
+<td>extended_study\output\reviewer_major_revision_v3\network\swmm_bidirectional_normal_step05.independent_audit.json</td>
+<td>2216</td>
+<td>9b4d76d0b9fdcd21c23424334a597aca66a2b0ec65c63c69d5229595a95e50c1</td>
+</tr>
+<tr>
+<td>extended_study\output\reviewer_major_revision_v3\larno_event68_checkpoint_audit.json</td>
+<td>1280</td>
+<td>030af0f33d876b0ee8e6c79990402fe4d3056571f54185cbea9e5b3dfc66a538</td>
+</tr>
+<tr>
+<td>extended_study\output\reviewer_major_revision_v4\final_hybrid_controls\experiment_metadata.json</td>
+<td>2300</td>
+<td>203add1005ffe769f1e9bab15c653b6c50d4d4f86ed05997661e9c94661841d8</td>
+</tr>
+<tr>
+<td>extended_study\output\reviewer_major_revision_v4\final_hybrid_controls\metrics\event_metrics_all_seeds.csv</td>
+<td>137771</td>
+<td>75e177a7281a3140348173ae892a7d25192695a2483c5921f22fca69a4d3f12b</td>
+</tr>
+<tr>
+<td>extended_study\output\reviewer_major_revision_v4\final_hybrid_controls\metrics\final_hybrid_network_controls.csv</td>
+<td>145064</td>
+<td>f51d2906061ee162aefd1e7adb015eba763a4bb4a444fa68c3fa007820aaa55a</td>
+</tr>
+<tr>
+<td>extended_study\output\reviewer_major_revision_v4\final_hybrid_controls\metrics\conditional_metrics_canonical_seed.csv</td>
+<td>212168</td>
+<td>e1a7842b5366a6dbbbee9310724d2410f6d899d80574cb6ec81ef9e07e57228f</td>
+</tr>
+<tr>
+<td>extended_study\output\reviewer_major_revision_v4\final_hybrid_controls\metrics\runtime_end_to_end.csv</td>
+<td>24790</td>
+<td>f36bd02fb9f81d6ebb3f3e705865ce099b36b806bd43e12a579a353e33ddc9da</td>
+</tr>
+<tr>
+<td>extended_study\output\reviewer_major_revision_v4\final_hybrid_controls\metrics\runtime_uncached_canonical.csv</td>
+<td>2461</td>
+<td>b0637096a0eade804a043ef6f170f8c8529c49819624ec50c0051a846c5818f3</td>
+</tr>
+<tr>
+<td>extended_study\output\reviewer_major_revision_v4\physical_sensitivity_event68\physical_sensitivity_metrics.csv</td>
+<td>1523</td>
+<td>d0a2cf7d8e63284bb323d564e0b60fc4a2887509dd0d92da615497a2f37cd6c1</td>
+</tr>
+</tbody>
+</table>
+<h2>7. Known unresolved evidence</h2>
+<p>No surveyed sewer inventory is available. No held-network experiment has been completed. Events outside the eight paired calculations do not have matched A/B/C labels; event79 is unreadable locally. Physical sensitivity to building-rainfall routing, effective loss and Manning roughness has not been repeated as a complete multi-event coupled factorial experiment. Author identities, affiliations, contributions, funding and target-journal metadata remain to be supplied. The upstream LarNO snapshot states MIT in its README but lacks a root licence file at the audited commit; dataset and checkpoint redistribution rights therefore require confirmation.</p>
+<h2>8. Verification commands</h2>
+<pre><code class="language-bash">python -m unittest discover -s tests -v
+python scripts/verify_repository.py
+</code></pre>
+<p>Verification is read-only. Evidence regeneration is a separate explicit command and changes committed hashes.</p></body>
+</html>

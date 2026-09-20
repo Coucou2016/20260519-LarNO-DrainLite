@@ -164,6 +164,45 @@ def regenerate_descriptors(static: dict[str, np.ndarray]) -> dict[str, np.ndarra
     return out
 
 
+def masked_uniform_mean(
+    values: np.ndarray, valid_mask: np.ndarray, size: int
+) -> np.ndarray:
+    """Return a neighbourhood mean that excludes inactive cells.
+
+    ``uniform_filter`` alone treats inactive/building cells as numerical zeros,
+    which depresses local water-depth means near walls and the domain boundary.
+    Filtering the numerator and denominator separately preserves the intended
+    active-cell average while returning zero where a window has no valid cell.
+    """
+    valid = valid_mask.astype(np.float32, copy=False)
+    numerator = uniform_filter(
+        np.where(valid_mask, values, 0.0).astype(np.float32, copy=False),
+        size=size,
+        mode="constant",
+        cval=0.0,
+    )
+    denominator = uniform_filter(valid, size=size, mode="constant", cval=0.0)
+    return np.divide(
+        numerator,
+        denominator,
+        out=np.zeros_like(numerator, dtype=np.float32),
+        where=denominator > 0.0,
+    )
+
+
+def precompute_surface_neighbourhoods(
+    arrays: dict[str, np.ndarray], static: dict[str, np.ndarray]
+) -> dict[str, np.ndarray]:
+    """Cache mask-aware local surface means once for repeated dense inference."""
+    surface = arrays["surface"]
+    mean3 = np.empty_like(surface, dtype=np.float32)
+    mean7 = np.empty_like(surface, dtype=np.float32)
+    for t in range(surface.shape[0]):
+        mean3[t] = masked_uniform_mean(surface[t], static["active_mask"], size=3)
+        mean7[t] = masked_uniform_mean(surface[t], static["active_mask"], size=7)
+    return {"surface_mean_3x3": mean3, "surface_mean_7x7": mean7}
+
+
 def shifted(array: np.ndarray, dr: int, dc: int) -> np.ndarray:
     result = np.zeros_like(array)
     src_r0, src_r1 = max(-dr, 0), min(array.shape[0] - dr, array.shape[0])
@@ -270,10 +309,15 @@ def feature_matrix(
     rows: np.ndarray,
     cols: np.ndarray,
     features: list[str] = SUPERSET,
+    neighbourhoods: dict[str, np.ndarray] | None = None,
 ) -> np.ndarray:
     surface = arrays["surface"][t]
-    surf3 = uniform_filter(surface, size=3, mode="nearest")
-    surf7 = uniform_filter(surface, size=7, mode="nearest")
+    if neighbourhoods is None:
+        surf3 = masked_uniform_mean(surface, static["active_mask"], size=3)
+        surf7 = masked_uniform_mean(surface, static["active_mask"], size=7)
+    else:
+        surf3 = neighbourhoods["surface_mean_3x3"][t]
+        surf7 = neighbourhoods["surface_mean_7x7"][t]
     phase = 2.0 * np.pi * (t + 1) / 72.0
     values: dict[str, np.ndarray] = {
         "surface_depth_mm": surface[rows, cols] * 1000.0,

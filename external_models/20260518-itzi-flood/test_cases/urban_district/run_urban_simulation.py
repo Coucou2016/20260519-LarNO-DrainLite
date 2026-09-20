@@ -17,7 +17,6 @@ import os, sys, time
 import numpy as np
 from datetime import timedelta
 
-sys.path.insert(0, r'E:\Miniconda3\Lib\site-packages')
 import itzi.rasterdomain as rasterdomain
 import itzi.surfaceflow as surfaceflow
 from itzi.hydrology import Hydrology

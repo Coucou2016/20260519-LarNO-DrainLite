@@ -23,7 +23,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-ROOT = Path(r"E:\Projects\20260519-LarNO")
+ROOT = Path(__file__).resolve().parents[1]
 FLOOD = ROOT / "LarNO-main" / "benchmark" / "urbanflood" / "flood" / "region1_20m_drainage_v1"
 GEO = ROOT / "LarNO-main" / "benchmark" / "urbanflood" / "geodata" / "region1_20m_drainage_v1"
 OUT = ROOT / "extended_study" / "output" / "drainage_process_spatial_audit"

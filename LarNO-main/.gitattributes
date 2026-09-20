@@ -10,3 +10,7 @@
 *.pth binary
 *.zip binary
 *.xlsx binary
+
+# Locally generated audited evidence must retain its exact hashed bytes.
+benchmark/urbanflood/flood/region1_20m_drainage_v3_full/** -text
+benchmark/urbanflood/geodata/region1_20m_drainage_v3_full/** -text

@@ -15,3 +15,8 @@
 *.csv text eol=lf
 *.yaml text eol=lf
 *.yml text eol=lf
+
+# Evidence manifests hash exact bytes; checkout must not rewrite line endings.
+extended_study/output/** -text
+LarNO-main/benchmark/urbanflood/flood/region1_20m_drainage_v3_full/** -text
+LarNO-main/benchmark/urbanflood/geodata/region1_20m_drainage_v3_full/** -text

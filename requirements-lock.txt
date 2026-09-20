@@ -1,0 +1,24 @@
+# Audited CPU-side DrainLite, reporting, and verification environment.
+# Python 3.13.12 on Windows build 17763.
+numpy==2.4.5
+scipy==1.17.1
+matplotlib==3.10.9
+SciencePlots==2.2.2
+scikit-learn==1.8.0
+joblib==1.5.3
+psutil==7.2.2
+beautifulsoup4==4.14.3
+Pillow==12.2.0
+pypdf==6.14.2
+networkx==3.6.1
+PySWMM==2.1.0
+swmm-toolkit==0.17.0
+
+# The accepted physical runs additionally used Itzï 25.4
+# (GPL-2.0-or-later) in its GRASS GIS environment. Itzï is intentionally not
+# installed from this generic lock file because its GIS runtime is
+# platform-specific; exact accepted settings are recorded in event metadata.
+
+# LarNO checkpoint reproduction is a separate Python 3.9/PyTorch environment
+# described by the upstream LarNO project. It is not part of the CPU DrainLite
+# lock and must not be inferred from this file.

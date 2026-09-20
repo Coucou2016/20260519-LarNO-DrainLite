@@ -3,10 +3,12 @@
 import numpy as np, os
 
 CELL = 20.0
-data = np.load(os.path.join('output', 'osm_pipe_network.npz'), allow_pickle=True)
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.dirname(SCRIPT_DIR)
+data = np.load(os.path.join(SCRIPT_DIR, 'output', 'osm_pipe_network.npz'), allow_pickle=True)
 nodes = data['nodes'].tolist()
 links = data['links'].tolist()
-dem = np.load(r'e:\Projects\20260519-LarNO\LarNO-main\benchmark\urbanflood\geodata\region1_20m\dem.npy').astype(np.float64)
+dem = np.load(os.path.join(PROJECT_ROOT, 'LarNO-main', 'benchmark', 'urbanflood', 'geodata', 'region1_20m', 'dem.npy')).astype(np.float64)
 H, W = dem.shape
 
 print(f'Input: {len(nodes)} nodes, {len(links)} links')

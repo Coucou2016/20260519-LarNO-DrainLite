@@ -22,15 +22,17 @@ import matplotlib.pyplot as plt
 from matplotlib.colors import LinearSegmentedColormap, ListedColormap
 import matplotlib.patches as mpatches
 from matplotlib.gridspec import GridSpec
+from pathlib import Path
 
 # ============================================================
 # Paths
 # ============================================================
-ROOT = r"e:\Projects\20260519-LarNO\LarNO-main\benchmark\urbanflood"
-DEM_PATH = os.path.join(ROOT, "geodata", "region1_20m", "dem.npy")
-FLOOD_DIR = os.path.join(ROOT, "flood", "region1_20m")
-OUT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "output")
-os.makedirs(OUT_DIR, exist_ok=True)
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+ROOT = PROJECT_ROOT / "LarNO-main" / "benchmark" / "urbanflood"
+DEM_PATH = ROOT / "geodata" / "region1_20m" / "dem.npy"
+FLOOD_DIR = ROOT / "flood" / "region1_20m"
+OUT_DIR = Path(__file__).resolve().parent / "output"
+OUT_DIR.mkdir(parents=True, exist_ok=True)
 
 CELL_SIZE = 20.0  # meters
 # Domain extent for plots

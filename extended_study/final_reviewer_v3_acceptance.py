@@ -1,8 +1,14 @@
 #!/usr/bin/env python3
-"""Independently verify reviewer-v3 arrays, metrics, and final artifacts."""
+"""Verify reviewer-v3 arrays, metrics, and final artifacts.
+
+The default mode is read-only.  ``--regenerate-evidence`` is reserved for the
+artifact-generation workflow and explicitly rewrites the committed acceptance
+record and submission manifest.
+"""
 
 from __future__ import annotations
 
+import argparse
 import csv
 import hashlib
 import json
@@ -47,7 +53,18 @@ def csi(pred: np.ndarray, target: np.ndarray, threshold: float) -> float:
     return 1.0 if union == 0 else float(tp / union)
 
 
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--regenerate-evidence",
+        action="store_true",
+        help="Rewrite final_acceptance.json and sha256_manifest.csv.",
+    )
+    return parser.parse_args()
+
+
 def main() -> int:
+    args = parse_args()
     checks: list[dict[str, object]] = []
     failures: list[str] = []
     active = np.load(GEO / "active_mask.npy").astype(bool)
@@ -163,15 +180,40 @@ def main() -> int:
         "failures": failures,
         "checks": checks,
     }
-    (PKG / "final_acceptance.json").write_text(json.dumps(result, indent=2), encoding="utf-8")
-
-    files = sorted(path for path in PKG.rglob("*") if path.is_file() and path.name != "sha256_manifest.csv")
-    with (PKG / "sha256_manifest.csv").open("w", encoding="utf-8-sig", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=["path", "bytes", "sha256"])
-        writer.writeheader()
-        for path in files:
-            writer.writerow({"path": str(path.relative_to(PKG)), "bytes": path.stat().st_size, "sha256": sha256(path)})
-    print(json.dumps({key: result[key] for key in ["status", "checks_total", "checks_passed", "failures"]}, indent=2))
+    if args.regenerate_evidence:
+        (PKG / "final_acceptance.json").write_text(
+            json.dumps(result, indent=2), encoding="utf-8"
+        )
+        files = sorted(
+            path
+            for path in PKG.rglob("*")
+            if path.is_file() and path.name != "sha256_manifest.csv"
+        )
+        with (PKG / "sha256_manifest.csv").open(
+            "w", encoding="utf-8-sig", newline=""
+        ) as handle:
+            writer = csv.DictWriter(handle, fieldnames=["path", "bytes", "sha256"])
+            writer.writeheader()
+            for path in files:
+                writer.writerow(
+                    {
+                        "path": str(path.relative_to(PKG)),
+                        "bytes": path.stat().st_size,
+                        "sha256": sha256(path),
+                    }
+                )
+    print(
+        json.dumps(
+            {
+                **{
+                    key: result[key]
+                    for key in ["status", "checks_total", "checks_passed", "failures"]
+                },
+                "mode": "regenerate" if args.regenerate_evidence else "read-only",
+            },
+            indent=2,
+        )
+    )
     return 0 if not failures else 1
 
 

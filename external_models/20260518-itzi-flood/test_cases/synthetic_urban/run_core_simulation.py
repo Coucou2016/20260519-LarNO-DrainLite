@@ -16,7 +16,6 @@ import numpy as np
 from datetime import datetime, timedelta
 
 # Add ITZI to path
-sys.path.insert(0, r'E:\Miniconda3\Lib\site-packages')
 
 import itzi.rasterdomain as rasterdomain
 import itzi.surfaceflow as surfaceflow

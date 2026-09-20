@@ -24,9 +24,9 @@ import gc
 import argparse
 import numpy as np
 from datetime import timedelta
+from importlib.metadata import PackageNotFoundError, version
 from scipy.ndimage import distance_transform_edt
 
-sys.path.insert(0, r'E:\Miniconda3\Lib\site-packages')
 import itzi.rasterdomain as rasterdomain
 import itzi.surfaceflow as surfaceflow
 from itzi.hydrology import Hydrology
@@ -38,10 +38,35 @@ import pyswmm
 from pyswmm import toolkitapi as tka
 from swmm.toolkit import solver as swmm_solver
 
-# The script closes the SWMM engine explicitly after every event.  On Windows,
-# ITZI's DrainageSimulation destructor may still call swmm_report() during
-# garbage collection, after the native handle has already been closed, which can
-# abort an otherwise completed batch run.  Keep lifecycle control local here.
+EXPECTED_RUNTIME = {
+    "itzi": "25.4",
+    "pyswmm": "2.1.0",
+    "swmm-toolkit": "0.17.0",
+}
+
+
+def assert_supported_runtime():
+    """Reject unreviewed native-coupling versions before opening SWMM."""
+    observed = {}
+    for package, expected in EXPECTED_RUNTIME.items():
+        try:
+            observed[package] = version(package)
+        except PackageNotFoundError as exc:
+            raise RuntimeError(f"Required package is not installed: {package}") from exc
+        if observed[package] != expected:
+            raise RuntimeError(
+                f"Unsupported {package} version {observed[package]!r}; "
+                f"the audited coupling requires {expected!r}."
+            )
+    return observed
+
+
+RUNTIME_VERSIONS = assert_supported_runtime()
+
+# Itzi 25.4 may call swmm_report() from DrainageSimulation.__del__ after this
+# batch runner has already closed the native engine explicitly.  The guarded
+# compatibility shim prevents a second native close/report call.  It is kept in
+# this version-asserted adapter rather than relying on an unversioned private API.
 DrainageSimulation.__del__ = lambda self: None
 
 # ============================================================
@@ -371,16 +396,17 @@ def run_simulation(label, dem, bldg, rainfall_3d, swmm_inp=None,
                     arr_qd = domain.get_array("n_drain")
                     arr_qd[:] = 0.0
                     step_drain = 0.0
+                    drainage_dt_s = drainage.dt.total_seconds()
                     for nid, q in flows.items():
                         if nid in node_id_to_loc:
                             row, col = node_id_to_loc[nid]
                             arr_qd[row, col] = q / CELL_AREA
                             # ITZI defines negative coupling flow as water leaving
                             # the 2D surface and entering the drainage network.
-                            step_drain += max(-q, 0) * drainage._dt
+                            step_drain += max(-q, 0) * drainage_dt_s
                     cumulative_drain += step_drain
                     cumulative_swmm_net_exchange += (
-                        sum(-q for q in flows.values()) * drainage._dt
+                        sum(-q for q in flows.values()) * drainage_dt_s
                     )
                 except Exception as exc:
                     if rain_idx <= 1:

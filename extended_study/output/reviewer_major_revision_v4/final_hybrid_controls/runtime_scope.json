@@ -1,0 +1,6 @@
+{
+  "scope": "in-memory correction including uncached dynamic neighbourhoods, feature assembly, prediction and non-negativity",
+  "excluded": "one-time static field and estimator loading, offline training-event prior preparation, input/output disk access",
+  "physical_time_source": "historical physics_quality.csv; workflow total is summed, not a fresh integrated wall-clock run",
+  "threads": "8"
+}

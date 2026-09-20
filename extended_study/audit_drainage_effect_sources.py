@@ -13,14 +13,20 @@ formal SWMM-coupled label in reports and manuscript text.
 from __future__ import annotations
 
 import csv
+import os
 from pathlib import Path
 
 import matplotlib.pyplot as plt
 import numpy as np
 
 
-ROOT = Path(r"E:\Projects\20260519-LarNO")
-OLD_OUTPUT = Path(r"E:\Projects\20260518-itzi-flood\test_cases\shenzhen_region1\output")
+ROOT = Path(__file__).resolve().parents[1]
+OLD_OUTPUT = Path(
+    os.environ.get(
+        "ITZI_LEGACY_OUTPUT",
+        ROOT / "external_models" / "20260518-itzi-flood" / "test_cases" / "shenzhen_region1" / "output",
+    )
+)
 DATASET = ROOT / "LarNO-main" / "benchmark" / "urbanflood" / "flood" / "region1_20m_drainage_v1"
 OUT = ROOT / "extended_study" / "output" / "drainage_effect_source_audit"
 FIG = OUT / "figures"

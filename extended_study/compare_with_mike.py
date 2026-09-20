@@ -16,8 +16,9 @@ import matplotlib; matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from matplotlib.colors import LinearSegmentedColormap, ListedColormap
 
-DEM_PATH = r"e:\Projects\20260519-LarNO\LarNO-main\benchmark\urbanflood\geodata\region1_20m\dem.npy"
-FLOOD_DIR = r"e:\Projects\20260519-LarNO\LarNO-main\benchmark\urbanflood\flood\region1_20m"
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DEM_PATH = os.path.join(PROJECT_ROOT, "LarNO-main", "benchmark", "urbanflood", "geodata", "region1_20m", "dem.npy")
+FLOOD_DIR = os.path.join(PROJECT_ROOT, "LarNO-main", "benchmark", "urbanflood", "flood", "region1_20m")
 OUT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "output", "mike_comparison")
 os.makedirs(OUT_DIR, exist_ok=True)
 

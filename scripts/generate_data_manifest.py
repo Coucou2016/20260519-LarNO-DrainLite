@@ -18,6 +18,9 @@ TARGETS = [
     ROOT / "extended_study" / "output" / "reviewer_major_revision_v3" / "formal_matched_full",
     ROOT / "extended_study" / "output" / "reviewer_major_revision_v3" / "network",
     ROOT / "extended_study" / "output" / "reviewer_major_revision_v3" / "submission_package_v3",
+    ROOT / "extended_study" / "output" / "reviewer_major_revision_v4" / "final_hybrid_controls",
+    ROOT / "extended_study" / "output" / "reviewer_major_revision_v4" / "submission_package_v4",
+    ROOT / "extended_study" / "output" / "reviewer_major_revision_v4" / "physical_sensitivity_event68",
 ]
 
 
@@ -63,4 +66,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

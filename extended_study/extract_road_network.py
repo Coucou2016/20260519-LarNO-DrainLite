@@ -23,7 +23,7 @@ from skimage import morphology as skimorph
 import warnings
 warnings.filterwarnings('ignore')
 
-DEM_PATH = r"e:\Projects\20260519-LarNO\LarNO-main\benchmark\urbanflood\geodata\region1_20m\dem.npy"
+DEM_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "LarNO-main", "benchmark", "urbanflood", "geodata", "region1_20m", "dem.npy")
 OUT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "output")
 os.makedirs(OUT_DIR, exist_ok=True)
 

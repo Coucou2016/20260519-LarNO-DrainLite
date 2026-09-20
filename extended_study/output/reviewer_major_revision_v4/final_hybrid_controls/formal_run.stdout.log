@@ -1,0 +1,57 @@
+sampling seed 1907 (1/5)
+  fold 1/8: event1
+    restored completed fold from checkpoint
+  fold 2/8: event20
+    restored completed fold from checkpoint
+  fold 3/8: event65
+    restored completed fold from checkpoint
+  fold 4/8: event66
+    restored completed fold from checkpoint
+  fold 5/8: event67
+    restored completed fold from checkpoint
+  fold 6/8: event68
+    restored completed fold from checkpoint
+  fold 7/8: event69
+    restored completed fold from checkpoint
+  fold 8/8: event70
+sampling seed 2718 (2/5)
+  fold 1/8: event1
+  fold 2/8: event20
+  fold 3/8: event65
+  fold 4/8: event66
+  fold 5/8: event67
+  fold 6/8: event68
+  fold 7/8: event69
+  fold 8/8: event70
+sampling seed 3141 (3/5)
+  fold 1/8: event1
+  fold 2/8: event20
+  fold 3/8: event65
+  fold 4/8: event66
+  fold 5/8: event67
+  fold 6/8: event68
+  fold 7/8: event69
+  fold 8/8: event70
+sampling seed 5772 (4/5)
+  fold 1/8: event1
+  fold 2/8: event20
+  fold 3/8: event65
+  fold 4/8: event66
+  fold 5/8: event67
+  fold 6/8: event68
+  fold 7/8: event69
+  fold 8/8: event70
+sampling seed 8119 (5/5)
+  fold 1/8: event1
+  fold 2/8: event20
+  fold 3/8: event65
+  fold 4/8: event66
+  fold 5/8: event67
+  fold 6/8: event68
+  fold 7/8: event69
+  fold 8/8: event70
+{
+  "output": "E:\\Projects\\20260519-LarNO\\extended_study\\output\\reviewer_major_revision_v4\\final_hybrid_controls",
+  "models": 14,
+  "runtime_seconds": 3419.7153553001117
+}

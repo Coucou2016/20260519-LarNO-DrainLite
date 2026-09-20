@@ -1,0 +1,50 @@
+cff-version: 1.2.0
+message: >-
+  If you use the original DrainLite code, derived conceptual-network dataset,
+  or reported results, cite this software record and the LarNO source article.
+title: >-
+  DrainLite: leakage-controlled residual emulation of a fixed conceptual sewer
+  network for urban flood modelling
+type: software
+authors:
+  - family-names: Coucou2016
+version: 4.0.0
+date-released: 2026-09-15
+repository-code: https://github.com/Coucou2016/20260519-LarNO-DrainLite
+license: MIT
+keywords:
+  - urban flooding
+  - drainage network
+  - Itzi
+  - SWMM
+  - residual emulation
+preferred-citation:
+  type: article
+  title: >-
+    DrainLite: leakage-controlled residual emulation of a fixed conceptual
+    sewer network for urban flood modelling
+  authors:
+    - family-names: Coucou2016
+  year: 2026
+  notes: Manuscript in preparation; bibliographic details remain to be completed before submission.
+references:
+  - type: article
+    title: >-
+      Large-scale urban flood modeling and zero-shot high-resolution
+      generalization with LarNO
+    authors:
+      - family-names: Cao
+        given-names: Xiaoyan
+      - family-names: Yao
+        given-names: Yao
+      - family-names: Wang
+        given-names: Zhi
+      - family-names: Zhao
+        given-names: Zhangxinyue
+      - family-names: Borthwick
+        given-names: Alistair G. L.
+      - family-names: Qin
+        given-names: Huapeng
+    year: 2026
+    journal: Journal of Hydrology
+    doi: 10.1016/j.jhydrol.2026.135686

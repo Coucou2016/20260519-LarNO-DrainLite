@@ -7,11 +7,10 @@ import re
 import sys
 from pathlib import Path
 
-sys.path.insert(0, r"E:\Miniconda3\Lib\site-packages")
 import pyswmm
 
 
-ROOT = Path(r"E:\Projects\20260519-LarNO")
+ROOT = Path(__file__).resolve().parents[1]
 INP = ROOT / "external_models" / "20260518-itzi-flood" / "test_cases" / "shenzhen_region1" / "input_data" / "networks" / "swmm_connected_sub.inp"
 RPT = INP.with_suffix(".rpt")
 OUT = ROOT / "extended_study" / "output" / "connected_swmm_network"

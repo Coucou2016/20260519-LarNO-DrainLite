@@ -35,7 +35,7 @@ for evt in events:
 H, W = all_data['event65']['h_ref'].shape
 extent = [0, W*CELL, 0, H*CELL]
 
-DEM_PATH = r"e:\Projects\20260519-LarNO\LarNO-main\benchmark\urbanflood\geodata\region1_20m\dem.npy"
+DEM_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "LarNO-main", "benchmark", "urbanflood", "geodata", "region1_20m", "dem.npy")
 dem_full = np.load(DEM_PATH); bldg_full = dem_full >= 49.9
 y0, y1, x0, x1 = 80, 280, 120, 400
 dem = dem_full[y0:y1, x0:x1]; bldg = bldg_full[y0:y1, x0:x1]

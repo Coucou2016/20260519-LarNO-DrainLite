@@ -1,17 +1,17 @@
-# Versions recorded for the accepted reviewer-v3 workflow.
+# Versions recorded for the accepted fixed-network workflow.  The fully pinned
+# cross-review environment is in requirements-lock.txt.
 numpy==2.4.5
 scipy==1.17.1
 matplotlib==3.10.9
 SciencePlots==2.2.2
 scikit-learn==1.8.0
+itzi==25.4
 PySWMM==2.1.0
 swmm-toolkit==0.17.0
-beautifulsoup4
-Pillow
-pypdf
-joblib
+beautifulsoup4==4.14.3
+Pillow==12.2.0
+pypdf==6.14.2
+joblib==1.5.3
 
-# The accepted coupled simulations used Itzi 25.4 in the copied formal model
-# environment. Install it using the platform-specific instructions retained in
-# external_models/20260518-itzi-flood rather than assuming a generic wheel.
-
+# The native coupling entry point rejects unreviewed Itzi, PySWMM and SWMM
+# toolkit versions before opening the engine.

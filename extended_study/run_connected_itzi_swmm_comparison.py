@@ -15,7 +15,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-ROOT = Path(r"E:\Projects\20260519-LarNO")
+ROOT = Path(__file__).resolve().parents[1]
 CASE = ROOT / "external_models" / "20260518-itzi-flood" / "test_cases" / "shenzhen_region1"
 RUNNER = CASE / "run_full_domain_coupled.py"
 CONNECTED_INP = CASE / "input_data" / "networks" / "swmm_connected_sub.inp"

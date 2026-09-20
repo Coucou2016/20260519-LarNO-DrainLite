@@ -1,0 +1,69 @@
+{
+  "created_at": "2026-09-15T18:46:45+0800",
+  "dataset": "region1_20m_drainage_v3_full",
+  "events": [
+    "event1",
+    "event20",
+    "event65",
+    "event66",
+    "event67",
+    "event68",
+    "event69",
+    "event70"
+  ],
+  "seeds": [
+    1907,
+    2718,
+    3141,
+    5772,
+    8119
+  ],
+  "canonical_seed": 1907,
+  "target": "signed residual h_C_itzi_swmm - h_B_surface_matched",
+  "outer_validation": "leave one complete rainfall event out",
+  "complexity_selection": "pre-specified fixed max_iter=140; no held-event or row-random early stopping",
+  "prior_control": "held event excluded; each fitted event receives a prior excluding its own target",
+  "network_controls": {
+    "shift": "20, 40, 80 and 160 m in four cardinal directions at inference",
+    "block_shuffle": "10 jointly permuted 20x20 cell network-block replicates",
+    "group_permutation": "5 joint active-cell permutations of all primitive network fields",
+    "zero_static_network_fields": "all primitive and derived network fields set to zero at inference; the leakage-controlled fixed-network prior remains present"
+  },
+  "runtime_scope": "feature construction + input assembly + estimator prediction + physical non-negativity post-processing",
+  "primary_residual_clipping": "none",
+  "clipping_sensitivity_mm": [
+    500,
+    1200
+  ],
+  "surface_depth_neighbourhood": "mask-aware mean excluding inactive/building cells",
+  "mike_role": "descriptive external reference; never used for fitting or model selection",
+  "arguments": {
+    "dataset_name": "region1_20m_drainage_v3_full",
+    "output_name": "reviewer_major_revision_v4/final_hybrid_controls",
+    "events": null,
+    "seeds": [
+      1907,
+      2718,
+      3141,
+      5772,
+      8119
+    ],
+    "pixels_per_step": 450,
+    "max_iter": 140,
+    "learning_rate": 0.05,
+    "max_leaf_nodes": 31,
+    "l2_regularization": 0.01,
+    "predict_chunk": 50000,
+    "block_size": 20,
+    "block_repeats": 10,
+    "permutation_repeats": 5,
+    "canonical_seed": 1907,
+    "skip_controls": false,
+    "all_models_every_seed": false,
+    "resume": true
+  },
+  "runtime_seconds": 3419.7153553001117,
+  "peak_rss_mb": 3926.33984375,
+  "platform": "Windows-10-10.0.17763-SP0",
+  "python": "3.13.12"
+}

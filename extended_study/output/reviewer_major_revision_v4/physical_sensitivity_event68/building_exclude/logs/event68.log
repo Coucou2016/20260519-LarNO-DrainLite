@@ -1,0 +1,43 @@
+
+[event68] B: matched inlet roughness, no SWMM
+  [event68 B] t=0.5h vol=19721m3 hmax=0.011m flooded=0 drained=0m3 infiltrated=17607m3
+  [event68 B] t=1.0h vol=239137m3 hmax=0.278m flooded=2297 drained=0m3 infiltrated=38547m3
+  [event68 B] t=1.5h vol=588713m3 hmax=1.143m flooded=15361 drained=0m3 infiltrated=59520m3
+  [event68 B] t=2.0h vol=850883m3 hmax=1.951m flooded=22345 drained=0m3 infiltrated=80497m3
+  [event68 B] t=2.5h vol=926414m3 hmax=2.315m flooded=23035 drained=0m3 infiltrated=101473m3
+  [event68 B] t=3.0h vol=999216m3 hmax=2.452m flooded=23199 drained=0m3 infiltrated=122447m3
+  [event68 B] t=3.5h vol=1000129m3 hmax=2.495m flooded=22694 drained=0m3 infiltrated=141564m3
+  [event68 B] t=4.0h vol=996332m3 hmax=2.512m flooded=22274 drained=0m3 infiltrated=158107m3
+  [event68 B] t=4.5h vol=993479m3 hmax=2.520m flooded=21947 drained=0m3 infiltrated=174616m3
+  [event68 B] t=5.0h vol=988847m3 hmax=2.524m flooded=21769 drained=0m3 infiltrated=189263m3
+  [event68 B] t=5.5h vol=985868m3 hmax=2.526m flooded=21625 drained=0m3 infiltrated=204988m3
+  [event68 B] t=6.0h vol=985882m3 hmax=2.528m flooded=21547 drained=0m3 infiltrated=223182m3
+  [event68 B] Done in 118s
+
+[event68] C: matched roughness plus native Itzi-SWMM
+  Setting up SWMM drainage network...
+    SWMM nodes: 2497, coupled to surface: 2276
+    SWMM links: 2276
+  [event68 C] t=0.5h vol=19621m3 hmax=0.011m flooded=0 drained=100m3 infiltrated=17607m3
+  [event68 C] t=1.0h vol=236764m3 hmax=0.276m flooded=2179 drained=2373m3 infiltrated=38547m3
+  [event68 C] t=1.5h vol=567585m3 hmax=1.126m flooded=14442 drained=21128m3 infiltrated=59520m3
+  [event68 C] t=2.0h vol=792543m3 hmax=1.924m flooded=21345 drained=58346m3 infiltrated=80497m3
+  [event68 C] t=2.5h vol=828916m3 hmax=2.300m flooded=21520 drained=97501m3 infiltrated=101471m3
+  [event68 C] t=3.0h vol=863951m3 hmax=2.438m flooded=21426 drained=135267m3 infiltrated=122444m3
+  [event68 C] t=3.5h vol=832581m3 hmax=2.483m flooded=20403 drained=167571m3 infiltrated=141544m3
+  [event68 C] t=4.0h vol=802953m3 hmax=2.501m flooded=19540 drained=193426m3 infiltrated=158057m3
+  [event68 C] t=4.5h vol=779882m3 hmax=2.511m flooded=18836 drained=213650m3 infiltrated=174559m3
+  [event68 C] t=5.0h vol=759504m3 hmax=2.516m flooded=18111 drained=229442m3 infiltrated=189162m3
+  [event68 C] t=5.5h vol=743915m3 hmax=2.518m flooded=17446 drained=242087m3 infiltrated=204852m3
+  [event68 C] t=6.0h vol=733537m3 hmax=2.521m flooded=17062 drained=252459m3 infiltrated=223039m3
+  [event68 C] Done in 2827s
+{
+  "report_found": true,
+  "runoff_continuity_error_pct": null,
+  "flow_routing_continuity_error_pct": -0.16,
+  "minimum_routing_step_s": 0.05,
+  "average_routing_step_s": 0.47,
+  "maximum_routing_step_s": 0.5,
+  "average_iterations_per_step": 2.0,
+  "steps_not_converging_pct": 0.0
+}

@@ -1,0 +1,19 @@
+﻿event,public_arrays_valid,used_in_paired_v3,selection_reason,mean_6h_rainfall_mm_active,max_local_6h_rainfall_mm_active,max_5min_rainfall_mm_active,mike_mean_depth_mm_active,mike_global_peak_m_active
+event1,True,True,complete locally generated matched A/B/C calculation,23.516315481451993,30.000771856555208,2.6983286099222776,23.037434063164195,2.707693449930331
+event20,True,True,complete locally generated matched A/B/C calculation,18.675267538525766,26.162511252114392,3.624243982976885,5.754264163617309,1.8372055739721347
+event65,True,True,complete locally generated matched A/B/C calculation,24.615166811626754,32.44941581444352,3.2788227498595677,22.25643678037737,2.2040998572296098
+event66,True,True,complete locally generated matched A/B/C calculation,25.947239038905916,28.69413986781115,2.899374186710458,24.5642004989634,2.2276069656114807
+event67,True,True,complete locally generated matched A/B/C calculation,30.202772687977028,38.530971978244985,3.1045286157170295,38.89397401414877,3.572832503722988
+event68,True,True,complete locally generated matched A/B/C calculation,28.64342056001923,32.72175909451016,2.6364670354763433,34.484646653650834,2.795013310095318
+event69,True,True,complete locally generated matched A/B/C calculation,27.525211793398732,36.2856384317792,2.9236169519581146,32.07360004506894,2.9710406574688273
+event70,True,True,complete locally generated matched A/B/C calculation,29.014763761929153,32.0864076662624,2.585275316483492,35.505732505607526,2.9762665646863256
+event71,True,False,public forcing/reference available; matched A/B/C calculation not generated,16.875344378372706,21.528600307121835,5.19355721694718,16.224956801745424,2.4502394883264107
+event72,True,False,public forcing/reference available; matched A/B/C calculation not generated,16.00407986109508,18.282790096480813,4.410538311684724,14.549534564518991,2.222845741517989
+event73,True,False,public forcing/reference available; matched A/B/C calculation not generated,16.211562282644152,17.927797054492995,4.324899828509767,14.937160459938255,2.220740872354542
+event74,True,False,public forcing/reference available; matched A/B/C calculation not generated,23.020423767852805,26.298142681905624,4.474601996658916,13.341105138028256,2.0098746804438252
+event75,True,False,public forcing/reference available; matched A/B/C calculation not generated,16.726524505361184,21.345999999999307,3.6319999999998824,5.659717480536497,1.773308862108303
+event76,True,False,public forcing/reference available; matched A/B/C calculation not generated,22.121730833655473,29.162396007709315,4.961951761454145,12.459593407647407,1.9528765397634538
+event77,True,False,public forcing/reference available; matched A/B/C calculation not generated,23.334371067668997,29.768657567529647,6.876385812382578,46.793795981665504,3.9054435477232214
+event78,True,False,public forcing/reference available; matched A/B/C calculation not generated,22.12963064350883,25.280515685969426,5.839651284185919,41.95882711168957,3.1542722127485137
+event79,False,False,unreadable public arrays: ValueError,,,,,
+event80,True,False,public forcing/reference available; matched A/B/C calculation not generated,22.41652682209285,24.789649296374417,5.726264018753154,43.09662350831943,3.3372735392316732
