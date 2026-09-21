@@ -1027,7 +1027,7 @@
     {
       "name": "figure resolution: fig10_mike_metric_tradeoff",
       "passed": true,
-      "detail": "(2838, 2038)"
+      "detail": "(2838, 1718)"
     },
     {
       "name": "figure artifact: fig11_runtime_clipping_event_selection.png",
@@ -1047,7 +1047,7 @@
     {
       "name": "figure resolution: fig11_runtime_clipping_event_selection",
       "passed": true,
-      "detail": "(2835, 2078)"
+      "detail": "(2838, 1838)"
     },
     {
       "name": "figure artifact: fig12_larno_reproduction.png",

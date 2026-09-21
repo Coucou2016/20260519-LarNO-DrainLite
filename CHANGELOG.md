@@ -4,6 +4,13 @@ This file records scientific revisions rather than every exploratory command.
 Superseded exploratory outputs remain local but are not treated as canonical
 evidence.
 
+## v4.1 - 2026-09-21
+
+- Restyled Figures 10 and 11 only: aligned horizontal dot comparisons,
+  slim runtime component bars, direct value labels and compact panels.
+- Updated figure-reading guidance and embedded figures in manuscript/report
+  exports. Numerical inputs, aggregation, experiments and conclusions unchanged.
+
 ## v4.0 - 2026-09-19
 
 - Repositioned DrainLite as a fixed-network drainage residual emulator rather

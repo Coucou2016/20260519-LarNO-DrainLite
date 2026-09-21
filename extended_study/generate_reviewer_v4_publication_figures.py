@@ -260,7 +260,7 @@ def fig10_mike_tradeoff() -> None:
     ]
     b_map = {"mae_mm": "B_vs_MIKE_mae_mm", "peak_map_mae_mm": "B_vs_MIKE_peak_map_mae_mm", "final_volume_abs_error_m3": "B_vs_MIKE_final_volume_abs_error_m3", "csi_0p15": "B_vs_MIKE_csi_0p15"}
     c_map = {key: value.replace("B_", "C_") for key, value in b_map.items()}
-    fig, axes = plt.subplots(2, 2, figsize=(7.1, 5.1), constrained_layout=True)
+    fig, axes = plt.subplots(2, 2, figsize=(7.1, 4.3), constrained_layout=True)
     for ax, (metric, ylabel) in zip(axes.flat, fields):
         b = np.mean([float(row[b_map[metric]]) for row in physics])
         c = np.mean([float(row[c_map[metric]]) for row in physics])
@@ -268,11 +268,20 @@ def fig10_mike_tradeoff() -> None:
         values = np.asarray([b, c, d])
         if metric == "final_volume_abs_error_m3":
             values /= 1000.0
-        ax.bar(models, values, color=["#777777", "#d55e00", "#0072b2"])
-        ax.set_ylabel(ylabel)
+        positions = np.arange(len(models))
+        ax.hlines(positions, 0, values, color="#d5d9dc", linewidth=1.2)
+        ax.scatter(values, positions, c=["#777777", "#d55e00", "#0072b2"], s=38, zorder=3, edgecolors="white", linewidths=0.6)
+        for position, value in zip(positions, values):
+            ax.annotate(f"{value:.3f}" if metric == "csi_0p15" else f"{value:.2f}", (value, position), xytext=(7, 0), textcoords="offset points", va="center", fontsize=8)
+        ax.set_yticks(positions, models)
+        ax.set_ylim(2.55, -0.55)
+        ax.set_xlim(0, max(values) * 1.32)
+        ax.set_xlabel(ylabel)
         ax.set_title({"mae_mm": "Full space-time field", "peak_map_mae_mm": "Cell-wise maxima", "final_volume_abs_error_m3": "End-of-event storage", "csi_0p15": "Flood-extent overlap"}[metric])
-        ax.tick_params(axis="x", rotation=20)
-        ax.grid(axis="y", alpha=0.22)
+        ax.grid(axis="x", alpha=0.18)
+        ax.spines[["top", "right", "left"]].set_visible(False)
+        ax.tick_params(axis="both", which="both", top=False, right=False)
+        ax.tick_params(axis="y", which="both", left=False)
     add_panel_labels(axes.flat, x=-0.14, y=1.04)
     save(fig, "fig10_mike_metric_tradeoff")
 
@@ -282,29 +291,41 @@ def fig11_runtime_clipping_selection() -> None:
     clipping = read_csv(EXP / "metrics" / "clipping_sensitivity.csv")
     inventory = read_csv(EXP / "metrics" / "event_selection_inventory.csv")
     hybrid_runtime = [row for row in runtime if row["model"] == "hybrid_all" and int(row["seed"]) == CANONICAL_SEED]
-    fig, axes = plt.subplots(2, 2, figsize=(7.1, 5.2), constrained_layout=True)
+    fig, axes = plt.subplots(2, 2, figsize=(7.1, 4.6), constrained_layout=True)
     components = ["feature_seconds", "assembly_seconds", "model_seconds", "postprocess_seconds"]
     labels = ["Feature", "Assembly", "Estimator", "Post-process"]
     values = [np.mean([float(row[name]) for row in hybrid_runtime]) for name in components]
-    axes[0, 0].bar(labels, values, color=["#56b4e9", "#999999", "#0072b2", "#009e73"])
-    axes[0, 0].set_ylabel("Time per event (s)")
+    axes[0, 0].barh(labels, values, height=0.32, color=["#56b4e9", "#999999", "#0072b2", "#009e73"])
+    axes[0, 0].invert_yaxis()
+    axes[0, 0].set_xlim(0, max(values) * 1.3)
+    for position, value in enumerate(values):
+        axes[0, 0].annotate(f"{value:.2f}", (value, position), xytext=(5, 0), textcoords="offset points", va="center", fontsize=8)
+    axes[0, 0].set_xlabel("Time per event (s)")
     axes[0, 0].set_title("Measured correction-time components")
-    axes[0, 0].tick_params(axis="x", rotation=20)
     b = np.mean([float(row["surface_runtime_s"]) for row in hybrid_runtime])
     total = np.mean([float(row["surface_plus_correction_seconds"]) for row in hybrid_runtime])
     c = np.mean([float(row["coupled_runtime_s"]) for row in hybrid_runtime])
-    axes[0, 1].bar(["Surface B", "B + DrainLite", "Coupled C"], [b, total, c], color=["#777777", "#0072b2", "#d55e00"])
-    axes[0, 1].set_yscale("log")
-    axes[0, 1].set_ylabel("Time per event (s, log scale)")
+    axes[0, 1].scatter([b, total, c], range(3), c=["#777777", "#0072b2", "#d55e00"], s=38, zorder=3)
+    axes[0, 1].set_yticks(range(3), ["Surface B", "B + DrainLite", "Coupled C"])
+    axes[0, 1].set_ylim(2.55, -0.55)
+    axes[0, 1].set_xscale("log")
+    axes[0, 1].set_xlim(b / 1.8, c * 2.5)
+    for position, value in enumerate([b, total, c]):
+        axes[0, 1].annotate(f"{value:.1f}", (value, position), xytext=(7, 0), textcoords="offset points", va="center", fontsize=8)
+    axes[0, 1].set_xlabel("Time per event (s, log scale)")
     axes[0, 1].set_title("End-to-end deployment comparison")
-    axes[0, 1].tick_params(axis="x", rotation=20)
     clip_groups: dict[str, list[dict[str, str]]] = defaultdict(list)
     for row in clipping:
         clip_groups[str(row["clip_mm"])].append(row)
     clip_order = [name for name in ["none", "500.0", "1200.0"] if name in clip_groups]
-    axes[1, 0].bar(clip_order, [np.mean([float(row["mae_mm"]) for row in clip_groups[name]]) for name in clip_order], color=["#0072b2", "#e69f00", "#cc79a7"])
-    axes[1, 0].set_xlabel("Residual clipping bound (mm)")
-    axes[1, 0].set_ylabel("Coupled-label MAE (mm)")
+    clip_values = [np.mean([float(row["mae_mm"]) for row in clip_groups[name]]) for name in clip_order]
+    axes[1, 0].scatter(clip_values, range(len(clip_order)), c=["#0072b2", "#e69f00", "#cc79a7"], s=38, zorder=3)
+    axes[1, 0].set_yticks(range(len(clip_order)), ["No clipping" if name == "none" else f"$\\pm${float(name):.0f} mm" for name in clip_order])
+    axes[1, 0].set_ylim(2.55, -0.55)
+    axes[1, 0].set_xlim(0, max(clip_values) * 1.35)
+    for position, value in enumerate(clip_values):
+        axes[1, 0].annotate(f"{value:.4f}", (value, position), xytext=(7, 0), textcoords="offset points", va="center", fontsize=8)
+    axes[1, 0].set_xlabel("Coupled-label MAE (mm)")
     axes[1, 0].set_title("Post-processing sensitivity")
     valid = [row for row in inventory if row["public_arrays_valid"].lower() == "true"]
     for used, colour, label in [(False, "#aaaaaa", "Public only"), (True, "#d55e00", "Paired A/B/C")]:
@@ -315,7 +336,12 @@ def fig11_runtime_clipping_selection() -> None:
     axes[1, 1].set_title("Event-inclusion context")
     axes[1, 1].legend(fontsize=6.5)
     for ax in axes.flat:
-        ax.grid(axis="y", alpha=0.22)
+        ax.grid(axis="x", alpha=0.18)
+        ax.spines[["top", "right"]].set_visible(False)
+        ax.tick_params(axis="both", which="both", top=False, right=False)
+    for ax in [axes[0, 0], axes[0, 1], axes[1, 0]]:
+        ax.spines["left"].set_visible(False)
+        ax.tick_params(axis="y", which="both", left=False)
     add_panel_labels(axes.flat, x=-0.14, y=1.04)
     save(fig, "fig11_runtime_clipping_event_selection")
 
