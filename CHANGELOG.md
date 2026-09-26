@@ -4,6 +4,19 @@ This file records scientific revisions rather than every exploratory command.
 Superseded exploratory outputs remain local but are not treated as canonical
 evidence.
 
+## v5.0 - 2026-09-27
+
+- Recomputed rainfall partitions for 576 intervals and separated rectangular
+  totals from active-cell means; identified the DEM-threshold barrier proxy.
+- Audited conduit slopes and absent outfall coordinates; retained numerical
+  limitations while simplifying the main network map to three panels.
+- Added event-versus-seed uncertainty, signed-residual diagnostics, display
+  tails and saved-time water ledgers without inventing missing solver records.
+- Reduced the main paper to 11 figures and 5 tables, rebuilt the independent
+  LarNO extreme-depth comparison, and exported four MD/HTML/PDF documents.
+- Added separate artifact freezing and read-only V5 verification. Full routed
+  exchange validation and multi-event scenario experiments remain pending.
+
 ## v4.1 - 2026-09-21
 
 - Restyled Figures 10 and 11 only: aligned horizontal dot comparisons,

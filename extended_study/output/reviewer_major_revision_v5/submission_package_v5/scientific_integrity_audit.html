@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>DrainLite evidence audit V5</title>
+<style>
+  @page { size: A4; margin: 18mm 17mm 19mm; }
+  body { max-width: 178mm; margin: 0 auto; color: #111827; font-family: "Times New Roman", "SimSun", "Songti SC", serif; font-size: 10.5pt; line-height: 1.48; }
+  h1 { font-size: 20pt; line-height: 1.18; color: #111827; margin: 0 0 16px; text-align: center; letter-spacing: 0; }
+  h2 { font-size: 14.5pt; color: #111827; border-bottom: 0.7pt solid #9ca3af; padding-bottom: 4px; margin: 25px 0 9px; letter-spacing: 0; }
+  h3 { font-size: 11.5pt; color: #111827; margin: 18px 0 6px; letter-spacing: 0; }
+  p { text-align: justify; margin: 6px 0; orphans: 3; widows: 3; }
+  ul, ol { margin: 6px 0 8px 22px; padding: 0; }
+  li { margin: 3px 0; }
+  table { width: 100%; border-collapse: collapse; margin: 9px 0 15px; font-size: 8.2pt; break-inside: avoid; page-break-inside: avoid; }
+  th, td { border: 0.55pt solid #6b7280; padding: 4px 5px; vertical-align: top; }
+  th { background: #eef1f4; text-align: left; font-weight: 700; }
+  img { display: block; max-width: 100%; height: auto; margin: 9px auto 5px; break-inside: avoid; page-break-inside: avoid; }
+  p:has(> img) { break-inside: avoid; page-break-inside: avoid; }
+  strong { font-weight: 700; }
+  code { font-family: Consolas, "Courier New", monospace; background: #f3f4f6; padding: 0 2px; overflow-wrap: anywhere; }
+  pre { white-space: pre-wrap; background: #f3f4f6; padding: 7px; font-size: 8.5pt; }
+  blockquote { margin: 8px 0 8px 18px; padding-left: 10px; border-left: 2px solid #9ca3af; color: #374151; }
+  h2, h3 { break-after: avoid; page-break-after: avoid; }
+
+            body { color: #171717; line-height: 1.56; }
+            table { font-size: 7.15pt; break-inside: auto; page-break-inside: auto; }
+            tr { break-inside: avoid; page-break-inside: avoid; }
+            th { background: #edf2f6; }
+            img { width: 100%; max-height: 236mm; object-fit: contain; }
+            p:has(> img) { margin-top: 12px; }
+            p > strong:first-child { color: #273746; }
+            h2 { color: #17365d; border-bottom-color: #7893aa; }
+            h3 { color: #274c68; }
+            a { color: #1f4e79; text-decoration: none; }
+            code { overflow-wrap: anywhere; }
+            figure { margin: 12px 0; break-inside: avoid; page-break-inside: avoid; }
+            figure img { max-height: 208mm; }
+            figcaption { font-size: 9pt; line-height: 1.4; }
+            .short-table { break-inside: avoid; page-break-inside: avoid; }
+            table { font-size: 6.6pt; } td { overflow-wrap: anywhere; }</style>
+</head>
+<body><h1>V5 scientific integrity and reviewer implementation audit</h1>
+<h2>Evidence boundary</h2>
+<p>Frozen source commit: <code>d5fefaa0cf7a31cf7d29830ed5b070e1d2dac3a2</code>. Current physical arrays, held-event predictions and training labels were not altered. MIKE rainfall/terrain/reference arrays and the public LarNO checkpoint are upstream materials, clearly attributed; A/B/C coupled simulations, fitted residual estimators and their diagnostics are this project's calculations. The manuscript does not claim all data are original observations.</p>
+<h2>Verified findings</h2>
+<p>The raw rainfall sum and active-cell mean use different masks. Geometric slope inspection finds no zero/negative conduit slope and 626 values near the design floor. No outfall has its own coordinate record. Spatial maps mark connecting terminals only. Peak-map differences are not instantaneous residuals. The held-event network increment is 0.047773 mm, event SD 0.037333 mm and sampling-seed macro SD 0.001819 mm. All are computed, not borrowed from the LarNO paper.</p>
+<h2>Implementation status</h2>
+<table>
+<thead>
+<tr>
+<th>Review item</th>
+<th>Status</th>
+<th>Evidence or limitation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rainfall mask and volume</td>
+<td>Recomputed</td>
+<td>576 intervals; verified numerical redistribution, not surveyed roof mask</td>
+</tr>
+<tr>
+<td>Peak-map meaning</td>
+<td>Corrected</td>
+<td>max(C)-max(B) explicitly separated from C(t)-B(t)</td>
+</tr>
+<tr>
+<td>Slope zeros and outfalls</td>
+<td>Recomputed</td>
+<td>0 nonpositive; 626 near floor; outfall coordinates absent</td>
+</tr>
+<tr>
+<td>Event and seed uncertainty</td>
+<td>Recomputed</td>
+<td>40 event-seed gains; event bootstrap conditional on exchangeability</td>
+</tr>
+<tr>
+<td>Inference perturbations</td>
+<td>Reframed</td>
+<td>OOD sensitivity separated from retrained feature benefit</td>
+</tr>
+<tr>
+<td>Native exchange formula/sign</td>
+<td>Unit check only</td>
+<td>Prescribed-head test double; no routed pipe benchmark</td>
+</tr>
+<tr>
+<td>Full joint internal-step water ledger</td>
+<td>Pending</td>
+<td>30-minute cumulative records and final report only</td>
+</tr>
+<tr>
+<td>Broader paired events / weather independence</td>
+<td>Pending</td>
+<td>Nine readable cases unpaired; dates/families unverified</td>
+</tr>
+<tr>
+<td>Multi-event rainfall treatment / network capacities / tailwater</td>
+<td>Pending</td>
+<td>Only existing single-event setting sensitivities completed</td>
+</tr>
+<tr>
+<td>Coarse prior / shifted rain / cross-scenario retraining</td>
+<td>Pending</td>
+<td>No new predictive claims</td>
+</tr>
+<tr>
+<td>Unclamped depth error changes and extreme LarNO tails</td>
+<td>Partially addressed</td>
+<td>LarNO full-range maps and extremes rebuilt; clamp counts retained; full raw-depth change diagnostics still need inference replay</td>
+</tr>
+<tr>
+<td>Authors and redistribution rights</td>
+<td>Author action</td>
+<td>Do not invent author declarations or upstream permission</td>
+</tr>
+</tbody>
+</table>
+<h2>Exact numerical evidence</h2>
+<table class="short-table">
+<thead>
+<tr>
+<th>File</th>
+<th>SHA256</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>extended_study/output/reviewer_major_revision_v5/diagnostics/event_seed_gain.csv</td>
+<td>38a470bd1594e725bdce7cfa3799018a417986646b2ea70a983ac0e83a6397a0</td>
+</tr>
+<tr>
+<td>extended_study/output/reviewer_major_revision_v5/diagnostics/hydrograph_diagnostics.csv</td>
+<td>d650c81cee3961e409672859b3a2eae4e95139ed320ab504b7763b93a59cf2c8</td>
+</tr>
+<tr>
+<td>extended_study/output/reviewer_major_revision_v5/diagnostics/larno_extremes.json</td>
+<td>1593c5d449e64c7b9bec5fbad13e9310b1bd3a1a4eb1f1796bb2214d3e482428</td>
+</tr>
+<tr>
+<td>extended_study/output/reviewer_major_revision_v5/diagnostics/map_display_audit.csv</td>
+<td>8d9d7b3d1190d4f5b1727e4274f56af29a4800472f184104d406a709a2d80ebe</td>
+</tr>
+<tr>
+<td>extended_study/output/reviewer_major_revision_v5/diagnostics/native_exchange_unit_check.json</td>
+<td>ef1f6529a83bec2b1b036952b12c66d62c718779d178d379db5a21281eb73f5c</td>
+</tr>
+<tr>
+<td>extended_study/output/reviewer_major_revision_v5/diagnostics/network_geometry.json</td>
+<td>4f694b48565d4e5f3a045afdefc8650d5ffe4faa85cca9756dbbfde62e0f46f8</td>
+</tr>
+<tr>
+<td>extended_study/output/reviewer_major_revision_v5/diagnostics/rainfall_event.csv</td>
+<td>9fafcafc913163ff5342fe24622daae99a62dbba229939cce0b828921af6cec5</td>
+</tr>
+<tr>
+<td>extended_study/output/reviewer_major_revision_v5/diagnostics/rainfall_steps.csv</td>
+<td>927a98aa697bf07c0d02e5d4f9aaa008c4e20f2a4b00c5a616f662eea01f00bf</td>
+</tr>
+<tr>
+<td>extended_study/output/reviewer_major_revision_v5/diagnostics/signed_residual_diagnostics.csv</td>
+<td>e17a7c27b821c13d73f4ac5cc8a288e1ef2f6fb38242c703cf1c7d649ef9af50</td>
+</tr>
+<tr>
+<td>extended_study/output/reviewer_major_revision_v5/diagnostics/summary.json</td>
+<td>3953ac835be6b93713e6efc661dbcea8432a2f7794c452848a3b17b40fa6f711</td>
+</tr>
+<tr>
+<td>extended_study/output/reviewer_major_revision_v5/diagnostics/water_ledger_saved_times.csv</td>
+<td>f694e6605b502d64038af47257aea863c4637c10e8d388fed95dd9176598a6b6</td>
+</tr>
+</tbody>
+</table>
+<h2>Reproduction commands</h2>
+<pre><code class="language-bash">python extended_study/audit_reviewer_v5_evidence.py
+python extended_study/test_v5_native_exchange.py
+python extended_study/generate_reviewer_v5_figures.py
+python extended_study/generate_reviewer_v5_documents.py
+python extended_study/render_reviewer_v5_documents.py
+</code></pre>
+<p>Primary training remains <code>extended_study/run_final_hybrid_major_revision.py</code> (fixed 140 iterations, no residual clipping). Historical V3 tuning is not a reproduction command for the V4/V5 primary results. Figures 1/2/6/7/9/10/11 and supplementary maps are rebuilt by the V5 figure script; unchanged physical-quality, hydrograph and peak-map illustrations originate from the frozen V4 package. Figure 5's data formula is audited in <code>plot_reviewer_v3_physics.py</code>. Full CSV evidence remains alongside concise manuscript tables; removing duplicate plots does not remove inconvenient results.</p>
+<h2>Writing sources and source verification</h2>
+<p>The revision follows concrete, evidence-led prose and distinguishes methods, results and interpretation. It does not manufacture an author voice, field observations or stronger conclusions to evade AI detection. Sources consulted: Manchester Academic Phrasebank (https://www.phrasebank.manchester.ac.uk/), KKKKhazix/human-writing (https://github.com/KKKKhazix/human-writing), petergyang/no-ai-slop (https://github.com/petergyang/no-ai-slop). These are editorial guidance, not scientific evidence.</p>
+<p>MIKE's coupled origin is established in Section 4.1 of the supplied Cao et al. paper, DOI 10.1016/j.jhydrol.2026.135686. The current public model card documents 13 released input channels and the 64/16 Futian split (https://github.com/holmescao/LarNO/blob/main/huggingface/model_card.md). Current Itzi stable documentation resolves to 26.6, while the frozen calculations use 25.4; the current documentation version must not be represented as the executed engine. Normal-depth outfalls are conceptual hydraulic boundary conditions, not measurements of receiving-water levels.</p>
+<h2>Submission readiness</h2>
+<p>This revision improves presentation and evidence transparency. It does not close the pending physical validation and scenario-generalisation requests. Numerical consistency checks alone are not grounds to declare the study calibrated or ready for unconditional submission.</p></body>
+</html>

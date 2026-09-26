@@ -36,8 +36,30 @@ drainage response; these are sensitivity results, not field calibration.
 
 MIKE is used only as an external plausibility reference. It is not a DrainLite
 training target. The public LarNO checkpoint is also audited independently and
-is not directly corrected by `C - B`, because its MIKE labels may already
-contain drainage effects.
+is not directly corrected by `C - B`, because its MIKE labels were generated
+with 1D-2D drainage coupling; the underlying sewer details are not public.
+
+## V5 evidence and presentation revision
+
+The current paper, report, supplement and integrity audit are in
+`extended_study/output/reviewer_major_revision_v5/submission_package_v5/`, each
+in Markdown, self-contained HTML and PDF. The main paper has 11 figures and
+5 tables. Training results remain the frozen V4 five-seed experiment; V5
+adds rainfall-mask reconciliation, signed-residual diagnostics, event-level
+uncertainty, full-range LarNO maps and explicit peak-map definitions.
+
+The 0.048 mm network increment has event-level SD 0.037 mm, distinct from
+the 0.002 mm sampling-seed SD. There are no nonpositive pipe slopes, but
+626 of 2,276 pipes lie near the imposed minimum. The barrier mask is a DEM
+threshold proxy, not a verified building inventory. Numerical closure does
+not establish field calibration. The routed single-pipe benchmark, complete
+internal-step joint ledger and multi-event scenario-transfer experiments
+remain pending and are listed in the integrity audit.
+
+Read-only verification: `python scripts/verify_reviewer_v5.py`.
+Artifact freezing is a separate explicit generation step:
+`python scripts/freeze_reviewer_v5.py`. It must not be used to make a failed
+verification pass without reviewing and documenting the underlying changes.
 
 ## Canonical contents
 

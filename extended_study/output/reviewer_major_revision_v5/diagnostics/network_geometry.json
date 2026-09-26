@@ -1,0 +1,11 @@
+{
+  "conduits": 2276,
+  "zero_or_negative_slopes": 0,
+  "minimum_slope": 0.0004985062490056077,
+  "maximum_slope": 0.10000223608595517,
+  "near_design_floor_count": 626,
+  "near_design_floor_tolerance": 2e-06,
+  "outfalls": 221,
+  "outfalls_with_coordinates": 0,
+  "note": "Near-floor count is geometric, not proof of individual algorithm adjustment history."
+}

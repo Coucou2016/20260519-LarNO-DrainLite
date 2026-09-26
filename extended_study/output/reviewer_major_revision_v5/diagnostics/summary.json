@@ -1,0 +1,31 @@
+{
+  "source_commit": "d5fefaa0cf7a31cf7d29830ed5b070e1d2dac3a2",
+  "network": {
+    "conduits": 2276,
+    "zero_or_negative_slopes": 0,
+    "minimum_slope": 0.0004985062490056077,
+    "maximum_slope": 0.10000223608595517,
+    "near_design_floor_count": 626,
+    "near_design_floor_tolerance": 2e-06,
+    "outfalls": 221,
+    "outfalls_with_coordinates": 0,
+    "note": "Near-floor count is geometric, not proof of individual algorithm adjustment history."
+  },
+  "network_gain_mean_mm": 0.047772994637489324,
+  "event_gain_sd_mm": 0.03733307424977243,
+  "seed_macro_gain_sd_mm": 0.0018186725521856532,
+  "event_bootstrap_95pct_mm": [
+    0.023754372373223302,
+    0.07127049237489694
+  ],
+  "bootstrap_scope": "Conditional on eight events being exchangeable; weather-date independence unverified",
+  "selected_rain_mm": 26.01751970922932,
+  "other_readable_rain_mm": 19.871132684694675,
+  "speed_mean_ratios": 13.097788423627685,
+  "speed_sd_ratios": 2.841147354339368,
+  "speed_ratio_means": 12.824869288304567,
+  "raw_array_changes": false,
+  "saved_water_ledger_interval_minutes": 30,
+  "full_joint_step_ledger_available": false,
+  "wall_proxy_is_verified_building_mask": false
+}
