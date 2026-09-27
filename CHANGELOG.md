@@ -4,6 +4,17 @@ This file records scientific revisions rather than every exploratory command.
 Superseded exploratory outputs remain local but are not treated as canonical
 evidence.
 
+## v7.0 - 2026-09-27
+
+- Re-read all eight original routing reports, identifying large local node
+  water-balance discrepancies not covered by the earlier global screen.
+- Verified that the two node-error tables use different denominators; retained
+  original percentages and approximate absolute volumes with rounding caveats.
+- Qualified previous acceptance claims: local hydraulic adequacy is unresolved;
+  shorter-step/node-budget validation has not yet been run.
+- Reduced main tables to four key-result groups and moved procedural diagnostics
+  to the supplement without concealing the numerical-quality finding.
+
 ## v6.0 - 2026-09-27
 
 - Unified main-text and figure nomenclature as a 1D/2D coupled hydrodynamic

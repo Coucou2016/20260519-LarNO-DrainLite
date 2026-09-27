@@ -39,7 +39,24 @@ training target. The public LarNO checkpoint is also audited independently and
 is not directly corrected by `C - B`, because its MIKE labels were generated
 with 1D-2D drainage coupling; the underlying sewer details are not public.
 
-## V6 manuscript presentation
+## V7 numerical-quality qualification
+
+Current manuscript/report: `extended_study/output/reviewer_major_revision_v7/submission_package_v7/`.
+An additional audit of the original routing reports found substantial local
+node water-balance discrepancies despite small whole-network continuity errors.
+For example, event68 node N01520 has a reported 63.01% inflow-normalised local
+imbalance (approximately 71.8 m3 based on rounded report volumes).
+**Local hydraulic adequacy is unresolved.** Earlier aggregate-screen passes
+must not be read as complete numerical validation. No label was changed and
+no convergence rerun has yet been performed for this finding.
+
+The main paper now uses four key-results tables; procedural diagnostics are
+retained in the supplement. Read-only verification:
+`python scripts/verify_reviewer_v7.py`. The explicit interpretation, original
+report hashes and required shorter-step/node-budget checks are in
+`extended_study/output/reviewer_major_revision_v7/numerical_quality_assessment.md`.
+
+## V6 manuscript presentation (archived)
 
 Current manuscript and report:
 `extended_study/output/reviewer_major_revision_v6/submission_package_v6/`.

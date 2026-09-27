@@ -1,0 +1,9 @@
+event,global_continuity_pct,nonconverging_steps_pct,top_node,top_node_error_pct_inflow,combined_error_pct_rain,assessment,report_sha256
+event1,-0.083,0.02,N00184,47.07,-0.09974456497289692,Global screen passes; local hydraulic adequacy unresolved,80dac135186362db9d7f488ca3d1a451a7859cd4c30ac66eb8ac5c334c736de1
+event20,-0.178,0.0,N00184,69.6,-0.03228739353315148,Global screen passes; local hydraulic adequacy unresolved,a96a84d9291f86cd8b643b41505d69c8758fac198b60f1fd4d6883023e68dffd
+event65,-0.111,0.0,N00184,65.45,-0.017382638396996386,Global screen passes; local hydraulic adequacy unresolved,a935ddc43dac2409fc687be664b96e0e29a3f94cc7a9d57a9ee1eb2c615c6984
+event66,-0.101,0.0,N00184,58.75,-0.015071601704478686,Global screen passes; local hydraulic adequacy unresolved,79d66f1d342abd8a37553f1544c8eafc0601b508b639ea5a55c2aff26e932186
+event67,-0.066,0.01,N01520,65.04,-0.11073225312918171,Global screen passes; local hydraulic adequacy unresolved,5476ca5c75b628b33c7105008015054a468b0d74dbbdf80ab422e33bd112a8ac
+event68,-0.06,0.04,N01520,63.01,-0.09663219527610716,Global screen passes; local hydraulic adequacy unresolved,b5969030313cdcb46d8700f2b26fda1207f049f1637ec8cbbf34701ee6932853
+event69,-0.068,0.01,N01520,52.93,-0.10122032991924841,Global screen passes; local hydraulic adequacy unresolved,81c7a06d9cb0dd1f9daf795c7d3d789ac64e89abbf36529f393a57de7eee1d7a
+event70,-0.063,0.01,N01520,56.86,-0.09806575829122277,Global screen passes; local hydraulic adequacy unresolved,af272aaf4b7e08b22cb3564b5923b9bafa0f797bd1864c4529c90b47977c8bed
