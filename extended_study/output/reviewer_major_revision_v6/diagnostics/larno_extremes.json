@@ -1,0 +1,13 @@
+{
+  "event": "event68",
+  "time_h": 3.25,
+  "frame_1based": 39,
+  "all_grid_reference_global_max_m": 2.795013310095318,
+  "all_grid_prediction_global_max_m": 2.826355457305908,
+  "reference_frame_over_0p5_pct": 0.5276785714285714,
+  "prediction_frame_over_0p5_pct": 0.5276785714285714,
+  "depth_display_max_m": 2.826355457305908,
+  "error_display_abs_max_mm": 242.4672394990921,
+  "display_high_saturation_pct": 0.0,
+  "raw_negative_frame_pct": 9.976339285714285
+}

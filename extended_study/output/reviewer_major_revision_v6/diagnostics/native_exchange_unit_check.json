@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "scope": "Native exchange function with prescribed-head test double; no pipe routing",
+  "itzi_version": "25.4",
+  "source_sha256": "693f5e81e5dbec974b30174d443fb93818f76e7e70eda8a714fc8740ed4fd863",
+  "cases": [
+    {
+      "case": "free_weir",
+      "computed_surface_source_m3s": -0.1986160885542667,
+      "independent_formula_m3s": -0.1986160885542667,
+      "swmm_generated_inflow_m3s": 0.1986160885542667,
+      "exchange_volume_sum_m3": 0.0,
+      "passed": true
+    },
+    {
+      "case": "return_orifice",
+      "computed_surface_source_m3s": 1.6808569243097404,
+      "independent_formula_m3s": 1.6808569243097404,
+      "swmm_generated_inflow_m3s": -1.6808569243097404,
+      "exchange_volume_sum_m3": 0.0,
+      "passed": true
+    },
+    {
+      "case": "dry_cell_limiter",
+      "computed_surface_source_m3s": -0.0002,
+      "independent_formula_m3s": -0.0002,
+      "swmm_generated_inflow_m3s": 0.0002,
+      "exchange_volume_sum_m3": 0.0,
+      "passed": true
+    },
+    {
+      "case": "equal_heads",
+      "computed_surface_source_m3s": 0.0,
+      "independent_formula_m3s": 0.0,
+      "swmm_generated_inflow_m3s": -0.0,
+      "exchange_volume_sum_m3": 0.0,
+      "passed": true
+    }
+  ]
+}

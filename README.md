@@ -39,9 +39,24 @@ training target. The public LarNO checkpoint is also audited independently and
 is not directly corrected by `C - B`, because its MIKE labels were generated
 with 1D-2D drainage coupling; the underlying sewer details are not public.
 
-## V5 evidence and presentation revision
+## V6 manuscript presentation
 
-The current paper, report, supplement and integrity audit are in
+Current manuscript and report:
+`extended_study/output/reviewer_major_revision_v6/submission_package_v6/`.
+Each document is supplied in Markdown, standalone HTML and PDF. The main paper
+now has 9 figures and 5 tables. It uses the term **1D/2D coupled hydrodynamic
+model**, with exact software provenance in the supplement. The redundant skill
+plot is covered by Table 2, and the sparse event scatter by a supplementary
+inventory. The physical sensitivity figure shows the original six scenarios'
+72-frame trajectories, verified against the unchanged summary statistics.
+Figure 6 is more compact; the benchmark model is labelled **LarNO**.
+Run `python scripts/verify_reviewer_v6.py` for read-only editorial checks.
+All V5 scientific limitations below still apply; no new physical experiment
+or surrogate training was introduced by this presentation revision.
+
+## V5 evidence and presentation revision (archived)
+
+The preceding paper, report, supplement and integrity audit are in
 `extended_study/output/reviewer_major_revision_v5/submission_package_v5/`, each
 in Markdown, self-contained HTML and PDF. The main paper has 11 figures and
 5 tables. Training results remain the frozen V4 five-seed experiment; V5

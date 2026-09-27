@@ -4,6 +4,18 @@ This file records scientific revisions rather than every exploratory command.
 Superseded exploratory outputs remain local but are not treated as canonical
 evidence.
 
+## v6.0 - 2026-09-27
+
+- Unified main-text and figure nomenclature as a 1D/2D coupled hydrodynamic
+  model; retained software versions and provenance in supplementary material.
+- Labelled the benchmark model LarNO and reframed its comparison around the
+  different scientific targets rather than checkpoint execution details.
+- Removed duplicate skill and sparse event plots, retained tables, compressed
+  residual-map spacing, and replaced the sensitivity heatmap with validated
+  time-series panels. The main paper contains 9 figures and 5 tables.
+- Explained event68 using its measured rainfall rank and drainage response,
+  without claiming a prospective selection rule or multi-event robustness.
+
 ## v5.0 - 2026-09-27
 
 - Recomputed rainfall partitions for 576 intervals and separated rectangular
